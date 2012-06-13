@@ -1,0 +1,467 @@
+/*!
+ *  set config for rtl project
+*/
+
+//Variables.less
+@baseFontSize:          16px;
+@baseFontFamily:        BBCNassim, Tahoma, Arial, sans-serif;
+@baseLineHeight:        21px;
+@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+
+@direction:             rtl;
+
+
+
+.ltr{
+    direction: ltr;
+}
+
+
+
+// Mixins.less
+#grid {
+    .core (@gridColumnWidth, @gridGutterWidth) {
+        [class*="span"] {
+            float: right!important;
+        }
+    }
+    
+    // edit majboor shodam dakhele file asli bedam chon to res motefavet ghabool nemikard
+    .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+        .row-fluid {
+            // width: 100%;
+           // .clearfix();
+            > [class*="span"] {
+               // float: right!important;
+               // margin-right: @fluidGridGutterWidth!important;
+               // margin-left: 0px!important;
+            }
+            > [class*="span"]:first-child {
+             //   margin-right: 0!important;
+            }            
+        }
+    }
+} 
+
+#font {
+  #family {
+    .serif() {
+      font-family: Tahoma, "Times New Roman", Times, serif;
+    }
+    .sans-serif() {
+      font-family: BBCNassim, Tahoma, Arial, sans-serif;
+    }
+    .monospace() {
+      font-family: Arial, Monaco, "Courier New", monospace;
+    }
+  }
+  .shorthand(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .serif(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .serif;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+  .sans-serif(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .sans-serif;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+  .monospace(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .monospace;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+}
+
+
+//Scaffolding
+body {
+  direction: @direction;
+}
+
+
+// Code.less
+code,
+pre {
+  direction: ltr;
+  text-align: left;
+}
+code {
+  display: inline-block;
+}
+
+
+
+// NAVIGATIONS
+.nav-tabs > li,
+.nav-pills > li {
+  float: right;
+}
+.tabs-left .nav-tabs > li,
+.tabs-right .nav-tabs > li {
+  float: none!important;
+}
+
+.nav-stacked > li{
+    float: none;
+}
+
+.nav .nav-header{
+   font-size: 16px;
+}
+// NAVBAR (FIXED AND STATIC)
+.brand {
+    padding: 8px 20px!important;
+    font-size: 30px!important;
+  }
+ 
+.navbar .nav > li {
+  float: right;
+}
+.navbar .nav {
+  float: right;
+}
+
+.navbar .dropdown-menu {
+    left: auto;
+    right: 0;
+    &:before {
+    left: auto;
+    right: 9px;
+  }
+  &:after {
+    right: 10px;
+    left: auto;
+  }
+}
+
+.navbar .nav.pull-left .dropdown-menu,
+.navbar .nav .dropdown-menu.pull-left {
+  right: auto;
+  left: 0;
+  &:before {
+    right: auto;
+    left: 12px;
+  }
+  &:after {
+    right: auto;
+    left: 13px;
+  }
+}
+
+
+.navbar {
+  .brand {
+    float: right;
+    margin-right: -20px;
+    margin-left: auto;
+  }
+}
+
+
+// Tables.less
+.table-bordered {
+  th,
+  td {
+    text-align: right;
+  }
+ }
+ 
+ 
+ 
+ // type.less
+ .dl-horizontal {
+  dt {
+    float: right;
+    clear: right;
+    width: 120px;
+    text-align: right;
+  }
+  dd {
+    margin-right: 130px;
+    margin-left: 0px!important;
+  }
+}
+
+
+
+// tables.less
+.table {
+  th,
+  td {   
+    text-align: right;
+  }
+ }
+ 
+ 
+ 
+ // forms.less
+ .radio,
+.checkbox {
+  padding-right: 18px;
+  padding-left: 0px;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: right;
+  margin-right: -18px;
+  margin-left: 0px;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.help-inline {
+  padding-right: 5px;
+  padding-left: 0;
+  vertical-align: top; //eanam add shode
+  margin-top: 5px; // add shode
+}
+
+.input-prepend,
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    *margin-right: 0;
+    *margin-left: none;
+    .border-radius(3px 0 0 3px);
+  }
+  
+  .add-on {
+    float: right;
+  }
+  
+  .add-on,
+  .btn {
+    .border-radius(0 3px 3px 0);
+  }
+  }
+  
+  .input-append {
+  input,
+  select
+  .uneditable-input {
+    .border-radius(0 3px 3px 0);
+  }
+  .add-on,
+  .btn {
+    margin-right: -1px;
+    margin-left: 0px;
+    .border-radius(3px 0 0 3px);
+}
+}
+
+
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-left: -1px;
+    margin-right: 0px;
+    .border-radius(0 3px 3px 0);
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    margin-right: -1px;
+    margin-left: 0px;
+    .border-radius(3px 0 0 3px);
+  }
+}
+
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-right: 0;
+}
+
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: right;
+  margin-right: 0;
+  margin-left: 3px;
+}
+
+
+.form-horizontal {
+  .control-label {
+    float: right;
+    text-align: left;
+  }
+  // Move over all input controls and content
+  .controls {
+    margin-right: 160px;
+    margin-left: 0px;
+    *margin-right: 0;
+    *padding-right: 20px;
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-right: 160px;
+    padding-left: 0px;
+  }
+}
+
+.help-block {
+  clear: both; // majboor shodam ezafe konam
+}
+
+
+// unknow
+select, input[type="file"]{
+    height: 32px;
+}
+
+
+// button-groups.less
+.btn-group .dropdown-toggle {
+ //height: 22px;
+}
+
+.btn-group .btn {
+  float: none;
+  margin-right: -3px;
+  margin-left: auto;
+}
+.btn-group .btn:first-child {
+  margin-right: 0;
+     -webkit-border-top-right-radius: 4px;
+             border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -webkit-border-top-left-radius: 0px;
+             border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+          border-bottom-left-radius: 0px;           
+
+}
+
+.btn-group + .btn-group{
+    margin-right: 5px;
+}
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+     -webkit-border-top-left-radius: 4px!important;
+             border-top-left-radius: 4px!important;
+  -webkit-border-bottom-left-radius: 4px!important;
+          border-bottom-left-radius: 4px!important;
+     -webkit-border-top-right-radius: 0px;
+             border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+          margin-right: -3px;
+}
+
+
+//dropdowns.less
+.dropdown-menu {
+    right:0;
+    left:auto;
+     &.pull-left {
+    right: auto;
+    left: 0;
+  }
+}
+
+.dropdown .caret {
+  margin-right: 2px;
+}
+
+//sprites.less
+[class^="icon-"],
+[class*=" icon-"] {
+  margin-top: 4px;
+}
+
+
+
+//buttons.less
+.btn-large [class^="icon-"] {
+  margin-top: 5px;
+}
+
+.btn-small [class^="icon-"] {
+  margin-top: 2px;
+}
+
+
+
+//pagination
+.pagination {
+  direction: ltr;
+ }
+ 
+ 
+//pager
+.pager {
+  direction: ltr;
+}
+
+//close
+.close {
+  float: left;
+}
+
+
+//alert
+.alert{
+    padding: 8px 15px 8px 35px;
+}
+.alert .close {
+  left: -21px;
+  right: auto;
+}
+
+
+//utilities
+
+.pull-left {
+  float: left!important;
+}
+
+
+
+//modals.less
+.modal-footer {
+   text-align: left;
+}
+
+
+//carousel.less
+.carousel {
+  direction: ltr;
+}
+.carousel-inner {
+ direction: rtl;
+}
+
+
+
+//progress-bars.less
+.progress.active .bar {
+          -webkit-transform:rotate(180deg);
+          -moz-transform:rotate(180deg);
+          transform:rotate(180deg);
+          border-bottom-left-radius: inherit;
+          border-top-left-radius: inherit;
+}

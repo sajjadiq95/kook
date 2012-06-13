@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <title>Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="کیت واسط کاربری - کوک">
+    <meta name="author" content="roohullah afzali">
+
+     <!-- the styles -->
+    <link href="css/uikit-.1.0.1.min.css" rel="stylesheet">
+    <link href="css/uikit-responsive.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- the HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- the fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+ <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">کوک</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="./index.html">آغازه</a>
+              </li>
+              <li>
+                <a href="./scaffolding.html">ساختاری</a>
+              </li>
+              <li class="active">
+                <a href="./base-css.html"> سی اس اس پایه ای</a>
+              </li>
+              <li class="">
+                <a href="./components.html">اجزاء سی اس اسی</a>
+              </li>
+              
+              <li class="">
+                <a href="./javascript.html">جاوا اسکریپت</a>
+              </li><!--
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
+              </li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <h1>سی اس اس پایه</h1>
+  <p class="lead">بر روی ساختار قرار می گیرد و به الملنها و ... شکل و ظاهری زیبا می بخشد.</p>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><a href="#typography">تایپوگراف</a></li>
+      <li><a href="#code">کد</a></li>
+      <li><a href="#tables">جدول</a></li>
+      <li><a href="#forms">فرم</a></li>
+      <li><a href="#buttons">دکمه</a></li>
+      <li><a href="#icons">آیکون ها</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- Typography
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>تایپوگراف <small>عنوان ها, پاراگراف ها, لیست ها, و سایر الملنهای مشابه</small></h1>
+  </div>
+
+  <h2>عنوان و سر عنوان ها</h2>
+
+  <!-- Headings & Paragraph Copy -->
+  <div class="row">
+    <div class="span4">
+      <h3>تایپوگراف و تنظیمات آن</h3>
+      <p>ما از دو متغیر اصلی در فایل مخصوص لس آن به نام های : <code>@baseFontSize</code> و <code>@baseLineHeight</code> استفاده کرده ایم. همانطور که از نامشان بر می آید برای اندازه فونت و اندازه خط می باشد.</p>
+      <p>We use those variables, and some math, to create the margins, paddings, and line-heights of all our type and more.</p>
+    </div>
+    <div class="span4">
+      <h3>مثال متن عادی صفحه</h3>
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+      <p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+    </div>
+    <div class="span4">
+      <div class="well">
+        <h1>h1. سر صفحه 1</h1>
+        <h2>h2. سر صفحه 2</h2>
+        <h3>h3. سر صفحه 3</h3>
+        <h4>h4. سر صفحه 4</h4>
+        <h5>h5. سر صفحه 5</h5>
+        <h6>h6. سر صفحه 6</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- Misc Elements -->
+  <h2>تاکید ها، مخفف ها و آدرس ها</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>المان</th>
+        <th>استفاده</th>
+        <th>توضیحات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>&lt;strong&gt;</code>
+        </td>
+        <td>
+          تاکید کردن بر روی قسمت <strong>مهم</strong>نوشته.
+        </td>
+        <td>
+          <span class="muted">ندارد</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;em&gt;</code>
+        </td>
+        <td>
+          برای ایجاد تفاوت مطلب <em>مورد توجه</em> در نوشته.
+        </td>
+        <td>
+          <span class="muted">ندارد</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;abbr&gt;</code>
+        </td>
+        <td>
+          در برگیرنده حروف مخفف برای توضیح بیشتر در آینده.
+        </td>
+        <td>
+          <p>شامل متغیر <code>title</code>برای عنوان کامل نوشته.</p>
+          استفاده از  <code>.initialism</code> برای بزرگ نویسی کلمه مخفف.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;address&gt;</code>
+        </td>
+        <td>
+          برای نمایش آدرس مورد نظر شما
+        </td>
+        <td>
+          تمامی کد خط ها باید با  <code>&lt;br&gt;</code> به پایان برسد
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <!-- Blockquotes -->
+  <h2>نقل قول</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>الملن</th>
+        <th>استفاده</th>
+        <th>توضیحات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>&lt;blockquote&gt;</code>
+        </td>
+        <td>
+          برای متونی که نقل قول هستند
+        </td>
+        <td>
+          <p>استفاده از <code>cite</code> برای آدرسی که نقل از آن انجام شده</p>
+          استفاده از <code>.pull-left</code> و <code>.pull-right</code> برای شناور کردن راست و چپ
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;small&gt;</code>
+        </td>
+        <td>
+          برای قرار دادن نام گوینده یا مطلب مرتبط با متن نقلی
+        </td>
+        <td>
+         از <code>&lt;cite&gt;</code>در اطراف نام و یا عنوان سورس متن استفاده شود
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="span4">
+      <p>برای ایجاد نقل قول لازم است تمام آنرا توسط  <code>&lt;blockquote&gt;</code> بپوشانید که شامل کدهای  <abbr title="HyperText Markup Language">HTML</abbr> می شود. برای استفاده بهتر میتوانید از تگ <code>&lt;p&gt;</code> استفاده نمایید.</p>
+      <p>همچنین با استفاده از  <code>&lt;small&gt;</code> نام گوینده را نیز افزوده و همچنین با استفاده از <code>&amp;mdash;</code> قبل از نام آن یک خط فاصله زیبا ایجاد نمایید.</p>
+    </div>
+    <div class="span8">
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.&lt;/p&gt;
+  &lt;small&gt;Someone famous&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre>
+    </div>
+  </div><!--/row-->
+
+  <h3>مثال نقل قول</h3>
+  <div class="row">
+    <div class="span6">
+      <p>نقل قول چپ چین:</p>
+      <blockquote>
+        <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+        <small>نام گوینده معروف  <cite title=""> ناقوس ها</cite></small>
+      </blockquote>
+    </div>
+    <div class="span6">
+      <p>نقل قول راست چین, با استفاده از <code>class="pull-right"</code>:</p>
+      <blockquote class="pull-right">
+        <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+         <small>نام گوینده معروف  <cite title=""> ناقوس ها</cite></small>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <!-- Lists -->
+  <h2>لیست ها</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>مرتب نا شدنی</h3>
+      <p><code>&lt;ul&gt;</code></p>
+      <ul>
+        <li>لورم ایپسوم متن ساختگی</li>
+        <li>تولید سادگی نامفهوم از صنعت</li>
+        <li>استفاده از طراحان گرافیک </li>
+        <li>اپگرها و متون بلکه روزنامه و مجله </li>
+        <li>سطرآنچنان که لازم است و برای شرایط
+          <ul>
+            <li>تکنولوژی مورد نیاز و کاربردهای متنوع </li>
+            <li>دف بهبود ابزارهای کاربردی می باشد</li>
+            <li>کتابهای زیادی در شصت و سه درصد گذشته</li>
+            <li>حال و آینده شناخت فراوان جامعه و متخصصان </li>
+          </ul>
+        </li>
+        <li>در این صورت می توان امید داشت </li>
+        <li>تمام و دشواری موجود در ارائه راهکارها </li>
+        <li>شامل حروفچینی دستاوردهای اصلی</li>
+      </ul>
+    </div>
+    <div class="span4">
+      <h3>بی شکل</h3>
+      <p><code>&lt;ul class="unstyled"&gt;</code></p>
+      <ul class="unstyled">
+        <li>لورم ایپسوم متن ساختگی</li>
+        <li>تولید سادگی نامفهوم از صنعت</li>
+        <li>استفاده از طراحان گرافیک </li>
+        <li>اپگرها و متون بلکه روزنامه و مجله </li>
+        <li>سطرآنچنان که لازم است و برای شرایط
+          <ul>
+            <li>تکنولوژی مورد نیاز و کاربردهای متنوع </li>
+            <li>دف بهبود ابزارهای کاربردی می باشد</li>
+            <li>کتابهای زیادی در شصت و سه درصد گذشته</li>
+            <li>حال و آینده شناخت فراوان جامعه و متخصصان </li>
+          </ul>
+        </li>
+        <li>در این صورت می توان امید داشت </li>
+        <li>تمام و دشواری موجود در ارائه راهکارها </li>
+        <li>شامل حروفچینی دستاوردهای اصلی</li>
+      </ul>
+      </ul>
+    </div>
+    <div class="span4">
+      <h3>مرتب شدنی</h3>
+      <p><code>&lt;ol&gt;</code></p>
+      <ol>
+        <li>لورم ایپسوم متن ساختگی</li>
+        <li>تولید سادگی نامفهوم از صنعت</li>
+        <li>استفاده از طراحان گرافیک </li>
+        <li>اپگرها و متون بلکه روزنامه و مجله </li>
+        <li>در این صورت می توان امید داشت </li>
+        <li>تمام و دشواری موجود در ارائه راهکارها </li>
+        <li>شامل حروفچینی دستاوردهای اصلی</li>
+        <li>کتابهای زیادی در شصت و سه درصد گذشته</li>
+      </ol>
+    </div>
+  </div><!-- /row -->
+  <br>
+  <div class="row">
+    <div class="span4">
+      <h3>توضیحات</h3>
+      <p><code>&lt;dl&gt;</code></p>
+      <dl>
+        <dt>لیست توضیحات</dt>
+        <dd>بهترین وسیله برای تعریف اصطلاحات.</dd>
+        <dt>ایپسوم</dt>
+        <dd>ستفاده از طراحان گرافیک کتابهای زیادی در شصت و سه درصد .</dd>
+        <dd>جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد.</dd>
+        <dt>لورم ایپسوم </dt>
+        <dd> تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای .</dd>
+      </dl>
+    </div>
+    <div class="span8">
+      <h3>توضیحات افقی</h3>
+      <p><code>&lt;dl class="dl-horizontal"&gt;</code></p>
+      <dl class="dl-horizontal">
+        <dt>لیست توضیحات</dt>
+        <dd>بهترین وسیله برای تعریف اصطلاحات.</dd>
+        <dt>ایپسوم</dt>
+        <dd>ستفاده از طراحان گرافیک کتابهای زیادی در شصت و سه درصد .</dd>
+        <dd>جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد.</dd>
+        <dt>لورم ایپسوم </dt>
+        <dd> تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای .</dd>
+      </dl>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Code
+================================================== -->
+<section id="code">
+  <div class="page-header">
+    <h1>کد <small>قطعه کدهای خطی یا بلوکی</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>خطی</h2>
+      <p>کد خطی خود را با  <code>&lt;code&gt;</code> بپوشانید.</p>
+<pre class="prettyprint linenums">
+For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
+</pre>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>بلوک ابتدایی</h2>
+      <p>از <code>&lt;pre&gt;</code> برای  کدهای چند خطی استفاده می شود. توجه داشته باشید که تمامی براکت ها را به این گونه بنویسید.</p>
+<pre>
+&lt;p&gt;Sample text here...&lt;/p&gt;
+</pre>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p><strong>توجه:</strong> مطمئن شوید که تگ  <code>&lt;pre&gt;</code> را در اولین فرصت ببندید تا جلوگیری کنید از اجرای سایر کدها در آن.</p>
+      <p>همچنین می توانید با افزودن  <code>.pre-scrollable</code> با ارتفاع مشخص قابلیت اسکرول دار شدن را نیز به آن بدهید.</p>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>گوگل پریتیفای</h2>
+      <p>مانند  <code>&lt;pre&gt;</code> می باشد با دو کلاس متفاوت.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;p&gt;Sample text here...&lt;/p&gt;
+</pre>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre class="prettyprint
+     linenums"&gt;
+  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p><a href="http://code.google.com/p/google-code-prettify/">دانلود گوگل پریتیفای</a> و مطالعه <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html"> نحوه استفاده از آن</a>.</p>
+    </div><!--/span-->
+  </div><!--/row-->
+</section>
+
+
+
+<!-- Tables
+================================================== -->
+<section id="tables">
+  <div class="page-header">
+    <h1>جداول <small>برای, آمار و  اطلاعات جدولی</small></h1>
+  </div>
+
+  <h2>تگ های جدول</h2>
+  <div class="row">
+    <div class="span8">
+      <table class="table table-bordered table-striped">
+        <colgroup>
+          <col class="span1">
+          <col class="span7">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>تگ</th>
+            <th>توضیحات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>&lt;table&gt;</code>
+            </td>
+            <td>
+              پیچیدن عنصر برای نمایش داده ها در قالب جدولی              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;thead&gt;</code>
+            </td>
+            <td>
+              محل قرارگیری عنوان ها مورد نظر در ستون دلخواه
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;tbody&gt;</code>
+            </td>
+            <td>
+              محل قرار گیری ردیف ها در بدنه اصلی جدول
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;tr&gt;</code>
+            </td>
+            <td>
+              محل قرارگیری سلول های جدول (<code>&lt;td&gt;</code> یا <code>&lt;th&gt;</code>) که در یک ردیف قرار می گیرند
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;td&gt;</code>
+            </td>
+            <td>
+              پیش فرض سلول جدول
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;th&gt;</code>
+            </td>
+            <td>
+              سلول مخصوص برای ستون که باید حتما با <br>
+              <code>&lt;thead&gt;</code> استفاده شود
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;caption&gt;</code>
+            </td>
+            <td>
+              توضیح یا مختصر نمایی از محتویات جدول
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="span4">
+<pre class="prettyprint linenums">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;…&lt;/th&gt;
+      &lt;th&gt;…&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;…&lt;/td&gt;
+      &lt;td&gt;…&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>گزینه های آزاد جدول</h2>
+  <table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+        <th>نام</th>
+        <th>کلاس</th>
+        <th>توضیح</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>پیش فرض</td>
+        <td class="muted">None</td>
+        <td>بدون سبک خاص، فقط ستونها و سطرها</td>
+      </tr>
+      <tr>
+        <td>ابتدایی</td>
+        <td>
+          <code>.table</code>
+        </td>
+        <td>فقط خطوط افقی بین ردیفها</td>
+      </tr>
+      <tr>
+        <td>خط دار</td>
+        <td>
+          <code>.table-bordered</code>
+        </td>
+        <td>افزودن مرز بیرونی و گوشه ها</td>
+      </tr>
+      <tr>
+        <td>راه راه</td>
+        <td>
+          <code>.table-striped</code>
+        </td>
+        <td>افزودن پس زمینه خاکستری در  ردیف های فرد</td>
+      </tr>
+      <tr>
+        <td>فشرده</td>
+        <td>
+          <code>.table-condensed</code>
+        </td>
+        <td>کاهش پدینگ عمودی به نصف در الملن های  <code>td</code> and <code>th</code> </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h2>مثال جداول</h2>
+
+  <h3>1. پیش فرض جداول با سبک</h3>
+  <div class="row">
+    <div class="span4">
+      <p>نمایش ابتدایی جداول با پیش فرض خطوط محدود به کمک کلاس  <code>.table</code></p>
+<pre class="prettyprint linenums">
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;</pre>
+    </div>
+    <div class="span8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>نام کاربری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>روح الله</td>
+            <td>افضلی</td>
+            <td class="ltr">@rva</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>هادی</td>
+            <td>گندمی</td>
+            <td class="ltr">@hgn</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>علیرضا</td>
+            <td>رنجبری</td>
+            <td class="ltr">@arc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <h3>2. جدول راه راه</h3>
+  <div class="row">
+    <div class="span4">
+      <p>راه راه کردن جدول برای مشاهده راحتتر به کمک کلاس <code>.table-striped</code></p>
+      <p class="muted"><strong>توجه:</strong> به علت استفاده از کد  <code>:nth-child</code> در مرورگر IE7 و IE8 قابل مشاهده نیست.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped"&gt;
+  …
+&lt;/table&gt;</pre>
+    </div>
+    <div class="span8">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>نام کاربری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>روح الله</td>
+            <td>افضلی</td>
+            <td class="ltr">@rva</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>هادی</td>
+            <td>گندمی</td>
+            <td class="ltr">@hgn</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>علیرضا</td>
+            <td>رنجبری</td>
+            <td class="ltr">@arc</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <h3>3. جدول خط دار</h3>
+  <div class="row">
+    <div class="span4">
+      <p>افزودن خط در اطاف وجدول برای نمای زیباتر.</p>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered"&gt;
+  …
+&lt;/table&gt;</pre>
+    </div>
+    <div class="span8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>نام کاربری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">1</td>
+            <td>روح الله</td>
+            <td>افضلی</td>
+            <td class="ltr">@rva</td>
+          </tr>
+          <tr>
+            <td>علیرضا</td>
+            <td>رنجبری</td>
+            <td class="ltr">@arc</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>هادی</td>
+            <td>گندمی</td>
+            <td class="ltr">@hgn</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colspan="2">محمود کلانتری</td>
+            <td class="ltr">@mk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <h3>4. جدول فشرده</h3>
+  <div class="row">
+    <div class="span4">
+      <p>با افزودن کلاس  <code>.table-condensed</code>  جدولی جمع و جورتر خواهیم داشت</p>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-condensed"&gt;
+  …
+&lt;/table&gt;</pre>
+    </div>
+    <div class="span8">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>نام کاربری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>روح الله</td>
+            <td>افضلی</td>
+            <td class="ltr">@rva</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>هادی</td>
+            <td>گندمی</td>
+            <td class="ltr">@hgn</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colspan="2">محمود کلانتری</td>
+            <td class="ltr">@mk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <h3>5. جدول ترکیبی</h3>
+  <div class="row">
+    <div class="span4">
+      <p>برای طراحی جدولی ترکیبی به راحتی کلاس های مورد نظرتان را استفاده نمایید.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped table-bordered table-condensed"&gt;
+  ...
+&lt;/table&gt;</pre>
+    </div>
+    <div class="span8">
+      <table class="table table-striped table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="2">نام و نام خانوادگی</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>#</th>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>نام کاربری</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <tr>
+            <td>1</td>
+            <td>روح الله</td>
+            <td>افضلی</td>
+            <td class="ltr">@rva</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>هادی</td>
+            <td>گندمی</td>
+            <td class="ltr">@hgn</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colspan="2">محمود کلانتری</td>
+            <td class="ltr">@mk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Forms
+================================================== -->
+<section id="forms">
+  <div class="page-header">
+    <h1>فرم ها</h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>ساختار منعطف</h2>
+      <p>یکی از مهم ترین خصوصیات فرم ها در کوک این است که شما می توانید بر هر شکلی در اچ تی ام ال آنها را قرار دهید، اما کوک آن را زیبا می کند. هیچ کد زائدی لازم نیست بزنید, هر چند که ما چند قالب آماده نیز برای شما در نظر گرفته ایم.</p>
+      <p>همچنین برای فرم های پیچیده تر شما می توانید کدها را به گونه ایی که مایلید گسترش دخید.</p>
+    </div>
+    <div class="span4">
+      <h2>چهار نوع طرح بندی</h2>
+      <p>کوک از 4 نوع طرح بندی استفاده می کند:</p>
+      <ul>
+        <li>عمودی (پیش فرض)</li>
+        <li>جستجو</li>
+        <li>خطی</li>
+        <li>افقی</li>
+      </ul>
+      <p>برای نمایش هر یک باید تغییراتی را در کد اچ تی ام ال ایجاد نمایید, اما سعی شده حداقلی و به شکل یکپارچه باشد.</p>
+    </div>
+    <div class="span4">
+      <h2>کنترل وضعیت های متفاوت</h2>
+      <p>کوک به ازای هر المان فرم طرح و سبک خاص خود را دارد. همچنین برخی المان نیز خودش بوجود آورده که به ما کمک کی کند.</p>
+      <p>حالات متفاوت از قبیل خطا، موفق، اخطار و ... را نیز به ازای هر الملن در نظر گرفته است. همچنین این حالات را برای وضعیت غیرفعال نیز دیده است.</p>
+    </div>
+  </div>
+
+  <h2>چهار نوع طرح بندی</h2>
+  <p>کوک ساختار و سبک ساده و زیبایی برای فرم ها در نظر گرفته است.</p>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>نام</th>
+        <th>کلاس</th>
+        <th>توضیحات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>عمودی (پیش فرض)</th>
+        <td><code>.form-vertical</code> <span class="muted">(ضروری نیست)</span></td>
+        <td>چینش لیبل ها روی کنترل ها</td>
+      </tr>
+      <tr>
+        <th>خطی</th>
+        <td><code>.form-inline</code></td>
+        <td>چینش راست چین لیبل و کنترل در یک خط برای طراحی فشرده</td>
+      </tr>
+      <tr>
+        <th>جستجو</th>
+        <td><code>.form-search</code></td>
+        <td>انحنا و گردی بیشتر کنترل نوشتاری برای زیبایی بیشتر</td>
+      </tr>
+      <tr>
+        <th>افقی</th>
+        <td><code>.form-horizontal</code></td>
+        <td>شناوری راست چین، چینش چپ چین لیبل و در همان سطح کنترل مربوطه</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h2>مثال های فرم <small>استفاده از کنترل ها بدون زائده</small></h2>
+  <div class="row">
+    <div class="span3">
+      <h3>فرم ابتدایی</h3>
+      <p>با کوک شکل و سبک زیباتر داشته باشید بدون کد زدن اضافی.</p>
+    </div>
+    <div class="span9">
+      <form class="well">
+        <label>نام لیبل</label>
+        <input type="text" class="span3" placeholder="چیزی بنویسید ..."> <span class="help-inline">متن کمک جانبی!</span>
+        <p class="help-block">متن نوشتاری بصورت بلوکی.</p>
+        <label class="checkbox">
+          <input type="checkbox"> چک باکس مورد نظر
+        </label>
+        <button type="submit" class="btn">تایید</button>
+      </form>
+<pre class="prettyprint linenums">
+&lt;form class="well"&gt;
+  &lt;label&gt;نام لیبل&lt;/label&gt;
+  &lt;input type="text" class="span3" placeholder="چیزی بنویسید ..."&gt;
+  &lt;span class="help-inline"&gt;متن کمک جانبی!&lt;/span&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt;  چک باکس مورد نظر
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;تایید&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+  </div> <!-- /row -->
+  <div class="row">
+    <div class="span3">
+      <h3>فرم جستجو</h3>
+      <p>قابل دیده شدن به صورت پیش فرض در وب کیت با افزودن  <code>.form-search</code> برای گرد شدن بیشتر اطراف.</p>
+    </div>
+    <div class="span9">
+      <form class="well form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">جستجو</button>
+      </form>
+<pre class="prettyprint linenums">
+&lt;form class="well form-search"&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;جستجو&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+  </div> <!-- /row -->
+  <div class="row">
+    <div class="span3">
+      <h3>فرم خطی</h3>
+      <p>کنترل ها در ابتدا می آیند. در  <code>.form-inline</code> و <code>.form-horizontal</code> ما از این طرح بندی استفاده می کنیم.</p>
+    </div>
+    <div class="span9">
+      <form class="well form-inline">
+        <input type="text" class="input-small" placeholder="نام کاربری">
+        <input type="password" class="input-small" placeholder="کلمه عبور">
+        <label class="checkbox">
+          <input type="checkbox"> مرا بخاطر دار
+        </label>
+        <button type="submit" class="btn">ورود</button>
+      </form>
+<pre class="prettyprint linenums">
+&lt;form class="well form-inline"&gt;
+  &lt;input type="text" class="input-small" placeholder="نام کاربری"&gt;
+  &lt;input type="password" class="input-small" placeholder="کلمه عبور"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; مرا بخاطر دار
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;ورود&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+
+  <br>
+
+  <h2>فرم های عمودی</h2>
+  <div class="row">
+    <div class="span8">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>کنترل های پشتیبان شده در کوک</legend>
+          <div class="control-group">
+            <label class="control-label" for="input01">متن ورودی</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">برای نمایش دادن متن ورودی(تکس باکس) به صورت یکپارچه</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox">چک باکس</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+               قابلیت انتخاب شدن یا نشدن با این سبک
+              </label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="select01">لیست انتخابی</label>
+            <div class="controls">
+              <select id="select01">
+                <option>یک مقدار</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect">چند انتخابی</label>
+            <div class="controls">
+              <select multiple="multiple" id="multiSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="fileInput">ورودی فایل</label>
+            <div class="controls">
+              <input class="input-file" id="fileInput" type="file">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="textarea">ورودی متن زیاد</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+            <button class="btn">لغو</button>
+          </div>
+        </fieldset>
+      </form>
+      <h3>کد مثال بالا</h3>
+      <p>این کد شامل قسمت هایی می شود که می توان با توجه به آن فرم بالا را ایجاد کرد. توجه به <code>.control-group</code>, <code>.control-label</code>, و <code>.controls</code> که در واقع کلاس های ضروری برای ایجاد فرم بالا هستند ضروری است.</p>
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;متن تیتر&lt;/legend&gt;
+    &lt;div class="control-group"&gt;
+      &lt;label class="control-label" for="input01"&gt;ورودی متن&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" class="input-xlarge" id="input01"&gt;
+        &lt;p class="help-block"&gt;متن راهنما&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>کنترل های مربوطه</h3>
+      <p>در مثال سمت راست ما کنترل هایی که پشتیبانی می کنیم را آورده ایم که به صورت لیست وار عبارتند از:</p>
+      <ul>
+        <li>ورودی نوشتاری (متنی، پسورد، ایمیل و ...)</li>
+        <li>چک باکس</li>
+        <li>رادیو</li>
+        <li>لیستی</li>
+        <li>لیست چند انتخابی</li>
+        <li>ورودی فایل</li>
+        <li>ورودی متن زیاد</li>
+      </ul>
+      <hr>
+      <h3>توجه</h3>
+      <p>ما بصورت پیش فرض از این نوع فرم استفاده نمی کنیم پس حتما در صورت لزوم کلاس اصلی آن را در کد خود وارد نمایید تا فرم شما به این شکل ایجاد شود.</p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="span8">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>وضعیت های فرم</legend>
+          <div class="control-group">
+            <label class="control-label" for="focusedInput">ورودی انتخاب شده</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="focusedInput" type="text" value="فکوس شده ...">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">ورودی غیر قابل ویرایش</label>
+            <div class="controls">
+              <span class="input-xlarge uneditable-input">مقدار فرضی</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="disabledInput">ورودی غیرفعال</label>
+            <div class="controls">
+              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="غیر فعال شده ..." disabled>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox2">چک باکس غیرفعال</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
+                چک باکس غیر فعال
+              </label>
+            </div>
+          </div>
+          <div class="control-group warning">
+            <label class="control-label" for="inputWarning">ورودی با اخطار</label>
+            <div class="controls">
+              <input type="text" id="inputWarning">
+              <span class="help-inline">شاید چیزی مشکل دارد</span>
+            </div>
+          </div>
+          <div class="control-group error">
+            <label class="control-label" for="inputError">ورودی با خطا</label>
+            <div class="controls">
+              <input type="text" id="inputError">
+              <span class="help-inline">حتما مشکلی هست</span>
+            </div>
+          </div>
+          <div class="control-group success">
+            <label class="control-label" for="inputSuccess">ورودی با موفقیت</label>
+            <div class="controls">
+              <input type="text" id="inputSuccess">
+              <span class="help-inline">آخش!</span>
+            </div>
+          </div>
+          <div class="control-group success">
+            <label class="control-label" for="selectError">لیستی با موفقیت</label>
+            <div class="controls">
+              <select id="selectError">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <span class="help-inline">آخش!</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره گردد</button>
+            <button class="btn">لغو</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="span4">
+      <h3>طراحی مجدد وضعیت های مرورگر</h3>
+      <p>کوک این سبک را برای دو وضعیت فکوس و<code>disabled</code> در مرورگرهای مشخص آماده کرده است. ما سبک پیش فرض وب کیت  <code>outline</code> را حذف کرده و <code>box-shadow</code> را برای <code>:focus</code> جایگزین کرده ایم.</p>
+      <hr>
+      <h3>صحت فرم</h3>
+      <p>همچنین سه وضعیت متفاوت برای تصدیق فیلد ها نیز افزودن شده است. برای استفاده کافی است که کلاس مربوطه را به  <code>.control-group</code> بیفزاییم.</p>
+<pre class="prettyprint linenums">
+&lt;fieldset
+  class="control-group error"&gt;
+  …
+&lt;/fieldset&gt;
+</pre>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="span8">
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>کنترل های اضافه تر</legend>
+          <div class="control-group">
+            <label class="control-label">فرم با سایزبندی گرید</label>
+            <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+              <select class="span1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <p class="help-block">استفاده از  <code>.span*</code> برای اندازه ورودی متن با توجه به گرید.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">سایر اندازه ها</label>
+            <div class="controls docs-input-sizes">
+              <input class="input-mini" type="text" placeholder=".input-mini">
+              <input class="input-small" type="text" placeholder=".input-small">
+              <input class="input-medium" type="text" placeholder=".input-medium">
+              <p class="help-block">استفاده از سایزبندی متفاوت اما با توجه به اندازه صفحه در حالت واکنشی.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="prependedInput">متن پیشوندی</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on">00.</span><input class="span2 ltr" id="prependedInput" size="16" type="text">
+              </div>
+              <p class="help-block">مکان متن راهنما!</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedInput">متن پسوندی</label>
+            <div class="controls">
+              <div class="input-append">
+                <input class="span2 ltr" id="appendedInput" size="16" type="text"><span class="add-on">@</span>
+              </div>
+              <span class="help-inline">متن کمکی جدید.</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedPrependedInput">پیشوندی و پسوندی</label>
+            <div class="controls">
+              <div class="input-prepend input-append">
+                <span class="add-on">gmail.com</span><input class="span2 ltr" id="appendedPrependedInput" size="16" type="text"><span class="add-on">@</span>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="appendedPrependedInput">پسوندی با دکمه</label>
+            <div class="controls">
+              <div class="input-append">
+                <input class="span2" id="appendedPrependedInput" size="16" type="text"><button class="btn" type="button">بگرد!</button>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inlineCheckboxes">چک باکس های خطی</label>
+            <div class="controls">
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+              </label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckboxList">چک باکس</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList1" value="option1">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList2" value="option2">
+                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList3" value="option3">
+                نرم افزارها شناخت بیستری را برای طراحان رایانه ای 
+              </label>
+              <p class="help-block"><strong>توجه:</strong> منطقه بزرگتر برای کلیک کردن و مناسب تر برای فرم.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">دکمه رادیویی</label>
+            <div class="controls">
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                در این صورت می توان امید داشت که تمام و دشواری موجود
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+               حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">تایید</button>
+            <button class="btn">برگشت</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="span4">
+      <h3>ورودی های پیشوندار و پسوندار</h3>
+      <p>راه کاری ساده و زیبا برای کوتاه کردن ساختار فرم و زیبا سازی آن مثلا فیلد دریافت ایمیل یا عدد.</p>
+      <hr>
+      <h3>چک باکس ها و رادیو دکمه ها</h3>
+      <p>یک راه حل ساده دیگر برای  افزایش کلیک پذیری به کمک تکرار <code>&lt;label class="checkbox"&gt;</code> که پوشانده شده است توسط  <code>&lt;input type="checkbox"&gt;</code>.</p>
+      <p>که به صورت خطی نیز قابل استفاده است. فقط با افزودن  <code>.inline</code> به هر <code>.checkbox</code> یا  <code>.radio</code> و دیگر تمام است.</p>
+      <hr>
+      <h4>پیشوند و پسوند خطی</h4>
+      <p>برای استفاده از آنها فقط کافی است  <code>.add-on</code> و <code>input</code> در یک خط و بدون فاصله باشد.</p>
+      <hr>
+      <h4>متن راهنمای فرم</h4>
+      <p>برای استفاده از متن راهنمای خطی  <code>&lt;span class="help-inline"&gt;</code> و برای متن راهنمای بلوکی  <code>&lt;p class="help-block"&gt;</code> را بنویسید.</p>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Buttons
+================================================== -->
+<section id="buttons">
+  <div class="page-header">
+    <h1>دکمه ها</h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>دکمه</th>
+        <th>کلاس</th>
+        <th>توضیح</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class="btn" href="#">پیش فرض</button></td>
+        <td><code>btn</code></td>
+        <td>خاکستری با گردیان استاندارد</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-primary" href="#">ابتدایی</button></td>
+        <td><code>btn btn-primary</code></td>
+        <td>ظاهری زیباتر و آبی رنگ برای جلب توجه بیشتر</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-info" href="#">اطلاع دهنده</button></td>
+        <td><code>btn btn-info</code></td>
+        <td>جایگزینی برای حالت پیش فرض</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-success" href="#">موفق</button></td>
+        <td><code>btn btn-success</code></td>
+        <td>مشخص کننده حالت موفق</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-warning" href="#">اخطار</button></td>
+        <td><code>btn btn-warning</code></td>
+        <td>نمایش دهنده بروز یک اخطار</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-danger" href="#">خطر</button></td>
+        <td><code>btn btn-danger</code></td>
+        <td>مشخصه یک خطا و یا عملیات مهم</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-inverse" href="#">برعکس</button></td>
+        <td><code>btn btn-inverse</code></td>
+        <td>دکمه سیاه رنگ برای تنوع و زیبایی بیشتر</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="span4">
+      <h3>دکمه ها در کد</h3>
+      <p>این سیک از دکمه علاوه بر زیبای به  ما قابلیت افزایش تمرکز کاربران در مناطق خاص یا افعال خاص مدنظر ما را می دهد. به صورت عادی ما از این نوع دکمه بر روی لینک یا دکمه باید استفاده کنیم هر چند که می تواند برخی از المانهای دیگر را نیز به این شکل در آورد</p>
+      <h3>سازگاری با مرورگرهای متفاوت</h3>
+      <p>سعی شده در اکثر مرورگرها شکل و سبک دکمه ها به همین منوال باشد البته در برخی نظیر IE9 تفاوت هایی دیده می شود.</p>
+    </div>
+    <div class="span4">
+      <h3>ابعاد متفاوت</h3>
+      <p>برای بزرگتر یا کوچک تر کردن اندازه دکمه کافی است  <code>.btn-large</code>, <code>.btn-small</code>, یا <code>.btn-mini</code> را وراد نمایید.</p>
+      <p>
+        <button class="btn btn-large btn-primary">اقدام اولیه</button>
+        <button class="btn btn-large">بیاب</button>
+      </p>
+      <p>
+        <button class="btn btn-small btn-primary">اقدام اولیه</button>
+        <button class="btn btn-small">بیاب</button>
+      </p>
+      <p>
+        <button class="btn btn-mini btn-primary">اقدام اولیه</button>
+        <button class="btn btn-mini">بیاب</button>
+      </p>
+      <br>
+      <h3>وضعیت غیرفعال</h3>
+      <p>برای غیرفعال کردن دکمه  <code>.disabled</code> را به کلاس لینک و یا  <code>disabled</code> به مشخصه المان  <code>&lt;button&gt;</code> بیفزایید.</p>
+      <p>
+        <a href="#" class="btn btn-large btn-primary disabled">لینک اولیه</a>
+        <a href="#" class="btn btn-large disabled">لینک</a>
+      </p>
+      <p style="margin-bottom: 18px;">
+        <button class="btn btn-large btn-primary disabled" disabled="disabled">دکمه اولیه</button>
+        <button class="btn btn-large" disabled>دکمه</button>
+      </p>
+      <p>
+        <span class="label label-info">دقت نمایید!</span>
+        ما از <code>.disabled</code> به عنوان یک کلاس کمکی استفاده کرده ایم, مانند کلاس  <code>.active</code> که نیازی به پیشوند خاصی ندارد.
+      </p>
+    </div>
+    <div class="span4">
+      <h3>یک کلاس برای تگ های متفاوت</h3>
+      <p>ما می توانیم از کلاس  <code>.btn</code> در  <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, یا <code>&lt;input&gt;</code> استفاده نماییم.</p>
+<form>
+<a class="btn" href="">لینک</a>
+<button class="btn" type="submit">دکمه</button>
+<input class="btn" type="button" value="ورودی">
+<input class="btn" type="submit" value="تایید">
+</form>
+<pre class="prettyprint linenums">
+&lt;a class="btn" href=""&gt;لینک&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;
+  دکمه
+&lt;/button&gt;
+&lt;input class="btn" type="button"
+         value="ورودی"&gt;
+&lt;input class="btn" type="submit"
+         value="تایید"&gt;
+</pre>
+      <p>برای مشاهده قابلیت اجرا در مرورگرهای متفاوت می توانید با توجه به سورس صفحه آن را در مرورگرهای متفاوت بررسی نماید.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Icons
+================================================== -->
+<section id="icons">
+  <div class="page-header">
+    <h1>آیکون <small>آیکونها برگرفته شده از <a href="http://glyphicons.com" target="_blank">گلیف آیکون</a></small></h1>
+  </div>
+  <div class="row">
+    <div class="span3">
+      <ul class="the-icons">
+        <li><i class="icon-glass"></i> icon-glass</li>
+        <li><i class="icon-music"></i> icon-music</li>
+        <li><i class="icon-search"></i> icon-search</li>
+        <li><i class="icon-envelope"></i> icon-envelope</li>
+        <li><i class="icon-heart"></i> icon-heart</li>
+        <li><i class="icon-star"></i> icon-star</li>
+        <li><i class="icon-star-empty"></i> icon-star-empty</li>
+        <li><i class="icon-user"></i> icon-user</li>
+        <li><i class="icon-film"></i> icon-film</li>
+        <li><i class="icon-th-large"></i> icon-th-large</li>
+        <li><i class="icon-th"></i> icon-th</li>
+        <li><i class="icon-th-list"></i> icon-th-list</li>
+        <li><i class="icon-ok"></i> icon-ok</li>
+        <li><i class="icon-remove"></i> icon-remove</li>
+        <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+        <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+        <li><i class="icon-off"></i> icon-off</li>
+        <li><i class="icon-signal"></i> icon-signal</li>
+        <li><i class="icon-cog"></i> icon-cog</li>
+        <li><i class="icon-trash"></i> icon-trash</li>
+        <li><i class="icon-home"></i> icon-home</li>
+        <li><i class="icon-file"></i> icon-file</li>
+        <li><i class="icon-time"></i> icon-time</li>
+        <li><i class="icon-road"></i> icon-road</li>
+        <li><i class="icon-download-alt"></i> icon-download-alt</li>
+        <li><i class="icon-download"></i> icon-download</li>
+        <li><i class="icon-upload"></i> icon-upload</li>
+        <li><i class="icon-inbox"></i> icon-inbox</li>
+        <li><i class="icon-play-circle"></i> icon-play-circle</li>
+        <li><i class="icon-repeat"></i> icon-repeat</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
+        <li><i class="icon-refresh"></i> icon-refresh</li>
+        <li><i class="icon-list-alt"></i> icon-list-alt</li>
+        <li><i class="icon-lock"></i> icon-lock</li>
+        <li><i class="icon-flag"></i> icon-flag</li>
+        <li><i class="icon-headphones"></i> icon-headphones</li>
+        <li><i class="icon-volume-off"></i> icon-volume-off</li>
+        <li><i class="icon-volume-down"></i> icon-volume-down</li>
+        <li><i class="icon-volume-up"></i> icon-volume-up</li>
+        <li><i class="icon-qrcode"></i> icon-qrcode</li>
+        <li><i class="icon-barcode"></i> icon-barcode</li>
+        <li><i class="icon-tag"></i> icon-tag</li>
+        <li><i class="icon-tags"></i> icon-tags</li>
+        <li><i class="icon-book"></i> icon-book</li>
+        <li><i class="icon-bookmark"></i> icon-bookmark</li>
+        <li><i class="icon-print"></i> icon-print</li>
+        <li><i class="icon-camera"></i> icon-camera</li>
+        <li><i class="icon-font"></i> icon-font</li>
+        <li><i class="icon-bold"></i> icon-bold</li>
+        <li><i class="icon-italic"></i> icon-italic</li>
+        <li><i class="icon-text-height"></i> icon-text-height</li>
+        <li><i class="icon-text-width"></i> icon-text-width</li>
+        <li><i class="icon-align-left"></i> icon-align-left</li>
+        <li><i class="icon-align-center"></i> icon-align-center</li>
+        <li><i class="icon-align-right"></i> icon-align-right</li>
+        <li><i class="icon-align-justify"></i> icon-align-justify</li>
+        <li><i class="icon-list"></i> icon-list</li>
+        <li><i class="icon-indent-left"></i> icon-indent-left</li>
+        <li><i class="icon-indent-right"></i> icon-indent-right</li>
+        <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+        <li><i class="icon-picture"></i> icon-picture</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
+        <li><i class="icon-pencil"></i> icon-pencil</li>
+        <li><i class="icon-map-marker"></i> icon-map-marker</li>
+        <li><i class="icon-adjust"></i> icon-adjust</li>
+        <li><i class="icon-tint"></i> icon-tint</li>
+        <li><i class="icon-edit"></i> icon-edit</li>
+        <li><i class="icon-share"></i> icon-share</li>
+        <li><i class="icon-check"></i> icon-check</li>
+        <li><i class="icon-move"></i> icon-move</li>
+        <li><i class="icon-step-backward"></i> icon-step-backward</li>
+        <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+        <li><i class="icon-backward"></i> icon-backward</li>
+        <li><i class="icon-play"></i> icon-play</li>
+        <li><i class="icon-pause"></i> icon-pause</li>
+        <li><i class="icon-stop"></i> icon-stop</li>
+        <li><i class="icon-forward"></i> icon-forward</li>
+        <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+        <li><i class="icon-step-forward"></i> icon-step-forward</li>
+        <li><i class="icon-eject"></i> icon-eject</li>
+        <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+        <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+        <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+        <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+        <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+        <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+        <li><i class="icon-question-sign"></i> icon-question-sign</li>
+        <li><i class="icon-info-sign"></i> icon-info-sign</li>
+        <li><i class="icon-screenshot"></i> icon-screenshot</li>
+        <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+        <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+        <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <ul class="the-icons">
+        <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+        <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+        <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+        <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+        <li><i class="icon-share-alt"></i> icon-share-alt</li>
+        <li><i class="icon-resize-full"></i> icon-resize-full</li>
+        <li><i class="icon-resize-small"></i> icon-resize-small</li>
+        <li><i class="icon-plus"></i> icon-plus</li>
+        <li><i class="icon-minus"></i> icon-minus</li>
+        <li><i class="icon-asterisk"></i> icon-asterisk</li>
+        <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+        <li><i class="icon-gift"></i> icon-gift</li>
+        <li><i class="icon-leaf"></i> icon-leaf</li>
+        <li><i class="icon-fire"></i> icon-fire</li>
+        <li><i class="icon-eye-open"></i> icon-eye-open</li>
+        <li><i class="icon-eye-close"></i> icon-eye-close</li>
+        <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+        <li><i class="icon-plane"></i> icon-plane</li>
+        <li><i class="icon-calendar"></i> icon-calendar</li>
+        <li><i class="icon-random"></i> icon-random</li>
+        <li><i class="icon-comment"></i> icon-comment</li>
+        <li><i class="icon-magnet"></i> icon-magnet</li>
+        <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+        <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+        <li><i class="icon-retweet"></i> icon-retweet</li>
+        <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+        <li><i class="icon-folder-close"></i> icon-folder-close</li>
+        <li><i class="icon-folder-open"></i> icon-folder-open</li>
+        <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+        <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="span4">
+      <h3>تک فایلی</h3>
+      <p>تمامی آیکون های موجود برای راحت تر بودن ویرایش و استفاده در یک فایل عکس قرار داده شده است که به صورت  <code>background-position</code>از همدیگر جدا می شود و قابل استفاده می گردد.</p>
+      <p>تمامی آیکون ها با پیشوند  <code>.icon-</code> آماده استفاده می باشد. این نوع نام گذاری به شما کمک می کند تا با سهولت بیشتری کار نمایید.</p>
+      <p><a href="http://glyphicons.com" target="_blank">گلیف آیکون</a> یک پروژه متن باز است که ما از آن استفاده کرده ایم.</p>
+    </div>
+    <div class="span4">
+      <h3>نحوه استفاده</h3>
+      <p>کوک از المان <code>&lt;i&gt;</code> برای آیکون ها پیشنهاد می مند استفاده کنید، هر چند اجباری نیست:</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon-search"&gt;&lt;/i&gt;
+</pre>
+      <p>همچنین آیکون ها با رنگ معکوس مثلا در اینجا سفید رنگ نیز موجود است:</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
+</pre>
+      <p>در حدود 120 کلاس متفاوت برای آیکون ها اماده شده است که برای ویرایش آنها می توانید فایل  <strong>sprites.less</strong> را ویرایش نمایید و یا آن را override نمایید.</p>
+      <p>
+        <span class="label label-info">دقت کنید!</span>
+        زمانی که برای منوی اصلی یا دکمه از آیکون ها استفاده می کنید حتما بهد از تگ  <code>&lt;i&gt;</code> یک فاصله کوچک بگذارید.
+      </p>
+    </div>
+    <div class="span4">
+      <h3>مواقع استفاده</h3>
+      <p>توجه داشته باشید هر چند آیکون ها به زیبایی طراحی می افزاید اما توجه داشته باشید که استفاده نامناسب از ان به ضرر طراحی شما و کاربر می باشد</p>
+      <p>بصورت خلاصه اگر شما <code>&lt;i&gt;</code> داشته باشید می توانید از آیکون استفاده نمایید اما باید به میزان، مکان و رنگ آن توجه لازم را داشته باشید.</p>
+    </div>
+  </div>
+
+  <h3>مثال</h3>
+  <p>موارد استفاده متفاوت برای آیکون ها در کوک.</p>
+  <div class="row">
+    <div class="span4">
+      <div class="btn-toolbar" style="margin-bottom: 9px">
+        <div class="btn-group">
+          <a class="btn" href="#"><i class="icon-align-left"></i></a>
+          <a class="btn" href="#"><i class="icon-align-center"></i></a>
+          <a class="btn" href="#"><i class="icon-align-right"></i></a>
+          <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+        </div>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> کاربر</a>
+          <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon-pencil"></i> ویرایش</a></li>
+            <li><a href="#"><i class="icon-trash"></i> حذف</a></li>
+            <li><a href="#"><i class="icon-ban-circle"></i> منع</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="i"></i> مدیریت</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn" href="#"><i class="icon-refresh"></i> بارگزاری مجدد</a>
+        <a class="btn btn-success" href="#"><i class="icon-shopping-cart icon-white"></i> پرداخت</a>
+        <a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i> حذف</a>
+      </p>
+      <p>
+        <a class="btn btn-large" href="#"><i class="icon-comment"></i> نظر</a>
+        <a class="btn btn-small" href="#"><i class="icon-cog"></i> تنظیمات</a>
+        <a class="btn btn-small btn-info" href="#"><i class="icon-info-sign icon-white"></i> اطلاعات بیشتر</a>
+      </p>
+    </div>
+    <div class="span4">
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-home icon-white"></i> آغازه</a></li>
+          <li><a href="#"><i class="icon-book"></i> کتابخانه</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> نرم افزارها</a></li>
+          <li><a href="#"><i class="i"></i> سایر</a></li>
+        </ul>
+      </div> <!-- /well -->
+    </div>
+    <div class="span4">
+      <form>
+        <div class="control-group">
+          <label class="control-label" for="inputIcon">آدرس ایمیل</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-envelope"></i></span>
+              <input class="span2 ltr" id="inputIcon" type="text">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">بالا</a></p>
+        <p>توسعه داده شده توسط تیم نرم افزاری تترا</p>
+        <p>پیشنهاد و نظرتان را با<a href="mailto:r.afzali@yahoo.com"> ما</a> در میان بگذرید</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- the javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="../js/uikit/transition.js"></script>
+    <script src="../js/uikit/alert.js"></script>
+    <script src="../js/uikit/modal.js"></script>
+    <script src="../js/uikit/dropdown.js"></script>
+    <script src="../js/uikit/scrollspy.js"></script>
+    <script src="../js/uikit/tab.js"></script>
+    <script src="../js/uikit/tooltip.js"></script>
+    <script src="../js/uikit/popover.js"></script>
+    <script src="../js/uikit/button.js"></script>
+    <script src="../js/uikit/collapse.js"></script>
+    <script src="../js/uikit/carousel.js"></script>
+    <script src="../js/uikit/typeahead.js"></script>
+    <script src="js/application.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa" >
+  <head>
+    <meta charset="utf-8">
+    <title>Scaffolding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="کیت واسط کاربری - کوک">
+    <meta name="author" content="roohullah afzali">
+
+    <!-- the styles -->
+    <link href="css/uikit-.1.0.1.min.css" rel="stylesheet">
+    <link href="css/uikit-responsive.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- the HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- the fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">کوک</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="./index.html">آغازه</a>
+              </li>
+              <li class="active">
+                <a href="./scaffolding.html">ساختاری</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html"> سی اس اس پایه ای</a>
+              </li>
+              <li class="">
+                <a href="./components.html">اجزاء سی اس اسی</a>
+              </li>
+              
+              <li class="">
+                <a href="./javascript.html">جاوا اسکریپت</a>
+              </li><!--
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
+              </li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Masthead
+      ================================================== -->
+      <header class="jumbotron subhead" id="overview">
+        <h1>چهارچوب اصلی</h1>
+        <p class="lead">کوک بر پایه ساختار 12 ستونه واکنش پذیر به دو صورت ثابت و روان  طراحی شده است </p>
+        <div class="subnav">
+          <ul class="nav nav-pills">
+            <li><a href="#global">سبک سراسری</a></li>
+            <li><a href="#gridSystem">سیستم گرید</a></li>
+            <li><a href="#fluidGridSystem">سیستم گرید روان</a></li>
+            <li><a href="#gridCustomization">سفارشی سازی</a></li>
+            <li><a href="#layouts">طرح بندی</a></li>
+            <li><a href="#responsive">طراحی واکنشی</a></li>
+          </ul>
+        </div>
+      </header>
+
+
+
+
+<!-- Global Bootstrap settings
+================================================== -->
+<section id="global">
+  <div class="page-header">
+    <h1>سبک سراسری  <small>برای سی اس اس reset، typography و links</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>نیاز به doctype اچ تی ام ال 5</h2>
+      <p>کوک بر اساس اچ تی ام ال 5 و سی اس اس 3 ساخته شده است. برای همین در ابتدای تمامی پروژه های کوک از doctype استفاده بشود.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fa"&gt;
+  ...
+&lt;/html&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>تایپوگراف و لینک ها</h2>
+      <p>در فایل <strong>scaffolding.less</strong>, ما نمایه عمومی، تایپوگراف و لینک ها را قرار دادیم. مهمترین آنها عبارتند از :</p>
+      <ul>
+        <li>حذف مارجین صفحه</li>
+        <li>قرار دادن <code>back-ground: white;</code> در <code>body</code></li>
+        <li>استفاده از خصوصیت <code>@baseFontFamily</code> و <code>@baseFontSize</code> و <code>@baseLineHeight</code> به عنوان پایه تایپوگرافی</li>
+        <li>قرار دادن رنگ سراسر لینک ها توسط  <code>@linkColor</code> و قرار دادن زیر خط فقط در  <code>:hover</code></li>
+      </ul>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h2>بازنشانی و حالت عادی</h2>
+      <p>ما در کوک از کلاس های متفاوتی از جمله  <a href="http://necolas.github.com/normalize.css/" target="_blank"> Normalize.css </a> که توسط  <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> و همچنین از کلاس  <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>
+      استفاده کرده ایم و فایل جدیدی با نام <strong> reset.less </strong>ایجاد کرده ایم که بسیاری از المانهای غیرضروری از آن حذف شده و مجموعه مناسبی را ایجاد کرد ه ایم.</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Grid system
+================================================== -->
+<section id="gridSystem">
+  <div class="page-header">
+    <h1>سیستم گرید <small>12 ستونه به همراه طراحی واکنشی</small></h1>
+  </div>
+
+  <div class="row show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row show-grid">
+    <div class="span12">12</div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <p>گرید اصلی که در کوک استفاده شده است عبارت است از  <strong>عرض 940 پیکسلی و12 ستون</strong>.</p>
+      <p>و شامل 4 واکنش مناسب با توجه به ابعاد نمایش و دستگاه: موبایل، تبلت در دو وضعیت عمودی و افقی، تصاویر مانتیور های کوچک و مانیتورهای عریض می باشد.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span4">
+      <p>همینطور که مشاهده می کنید شما می توانید به راحتی با نوشتن عدد مورد نظر  بر مینای 12 نوع گرید صفحه خود را مشخص نمایید</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <h2>ستون های آفست</h2>
+  <div class="row show-grid">
+    <div class="span4">4</div>
+    <div class="span4 offset4">4 آفست  4</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span3 offset3">3 آفست 3</div>
+    <div class="span3 offset3">3 آفست 3</div>
+  </div><!-- /row -->
+  <div class="row show-grid">
+    <div class="span8 offset4">8 آفست 4</div>
+  </div><!-- /row -->
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span4 offset4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <br>
+
+  <h2>ستون های تو در تو</h2>
+  <div class="row">
+    <div class="span6">
+      <p>در کوک ستون های تو در تو درست کردن کار بسیار ساده ای می باشد و کافی است یک  <code>.row</code>جدید را در  <code>.span*</code> موجودتان قرار دهید و در آن  <code>.span*</code> جدید دیگری را قرار دهید.</p>
+      <h3>مثال</h3>
+      <p>در این طراحی باید توجه داشته باشیم که مثلا دو <code>.span3</code> را می توانیم در  <code>.span6</code> قرار دهیم و یا مانند مثال روبرو باید چینشمان را انجام دهیم.</p>
+      <div class="row show-grid">
+        <div class="span6">
+          Level 1 of column
+          <div class="row show-grid">
+            <div class="span3">
+              Level 2
+            </div>
+            <div class="span3">
+              Level 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+<!-- Fluid grid system
+================================================== -->
+<section id="fluidGridSystem">
+  <div class="page-header">
+    <h1>سیستم گرید روان <small>واکنشی 12 بر پایه ستون های درصدی</small></h1>
+  </div>
+
+  <h2>ستون های روان</h2>
+  <div class="row-fluid show-grid">
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+    <div class="span1">1</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+    <div class="span4">4</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span4">4</div>
+    <div class="span8">8</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span6">6</div>
+    <div class="span6">6</div>
+  </div>
+  <div class="row-fluid show-grid">
+    <div class="span12">12</div>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+      <h3>درصد و نه پیکسل</h3>
+      <p>در سیستم گرید روان بجای استفاده از پیکسل از دزصد برای محاسبه ابعاد استفاده می شود. این سیستم نیز به مانند سیستم گرید ثابت به صورت های متفاوت واکنش نشان می دهد,چه در دستگاه های دیگر و یا ابعاد مانیتور های دیگر.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>ردیف های روان</h3>
+      <p>می توانید به راحتی و با تغییر <code>.row</code> به  <code>.row-fluid</code> ردیف های خود را روان گردانید. ستون های بدون هیچ مشکلی با هر دو نوع کار می توانند بکنند پس شما می توانید براحتی حالت ردیف های خود را تغییر دهید</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>مثال</h3>
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <h2>تودرتو روان</h2>
+  <div class="row">
+    <div class="span6">
+      <p>در این تو در تو کمی تفاوت می بینید و شما نباید تعداد بچه ها با توجه به والد باشد.چون در صورت نیاز خود ردیف به صورت 100 درصد دیده می شود.</p>
+      <div class="row-fluid show-grid">
+        <div class="span12">
+          روان 12
+          <div class="row-fluid show-grid">
+            <div class="span6">
+              روان 6
+            </div>
+            <div class="span6">
+              روان 6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.span -->
+    <div class="span6">
+<pre class="prettyprint linenums">
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span12"&gt;
+    Level 1 of column
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Customizaton
+================================================== -->
+<section id="gridCustomization">
+  <div class="page-header">
+    <h1>گرید سفارشی</h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>متغییر</th>
+        <th>مقدار پیش فرض</th>
+        <th>توضیح</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>@gridColumns</code></td>
+        <td>12</td>
+        <td>تعداد ستون ها</td>
+      </tr>
+      <tr>
+        <td><code>@gridColumnWidth</code></td>
+        <td>60px</td>
+        <td>عرض هر ستون</td>
+      </tr>
+      <tr>
+        <td><code>@gridGutterWidth</code></td>
+        <td>20px</td>
+        <td>فاصله بین ستون ها</td>
+      </tr>
+      <tr>
+        <td><code>@siteWidth</code></td>
+        <td><em>محاسبه اتوماتیک ستون ها و فاصله ها</em></td>
+        <td>محاسبه تعداد ستون ها و فواصل برای تنظیم عرض  <code>.container-fixed()</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="span4">
+      <h3>متغیرها در لس</h3>
+      <p>همانطوری مشاهده می کنید در مطالب بالا کوک بری تمامی تنظیمات مهم از متغییرهایی در سی اس اس استفاده کرده است که شما می توانید تمامی آنها را در فایل variables.less پیدا و تنظیم نمایید.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>چگونگی سفارشی سازی</h3>
+      <p>سفارشی سازی یعنی تغییر در متغییرهای سه گانه <code>@grid*</code> و کامپایل مجدد کوک. برای تغییر شما می توانید موازد مورد نظرتان را در فایل variables.less تغییر داده و از یکی از <a href="less.html#compiling">راه های چهارگانه کامپایل</a> استفاده نمایید. اگر شما تغییری در گرید دادید حتما آن را در فایل grid.less نیز اعمال کنید.</p>
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>طراحی را واکنشی نگه دارید</h3>
+      <p>سفارشی کردن گرید فقط در ابعاد 940 پیکسل کار خواهد کرد پس برای کار کردن به صورت واکنشی حتما فایل responsive.less را نیز ویرایش نمایید.</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Layouts (Default and fluid)
+================================================== -->
+<section id="layouts">
+  <div class="page-header">
+    <h1>طرح بندی <small>قالب مقدماتی برای طراحی سایت</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>طرح بندی ثابت</h2>
+      <p>طرح پیش فرض با عرض 940 پیکسل, با طراحی وسط چین برای طراحی هر نوع سایت فقط با افزودن  <code>&lt;div class="container"&gt;</code>به صفحه خود.</p>
+      <div class="mini-layout">
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+    </div><!-- /.span -->
+    <div class="span6">
+      <h2>طرح بندی روان</h2>
+      <p><code>&lt;div class="container-fluid"&gt;</code>به شما قابلیت صفحات با ساختار قدرتمند، حداقل و حداکثری عرض صفحه و همچنین نوار مجزا سمت راست را می دهد که برای نرم افزار ها  بسیار مناسب است.</p>
+      <div class="mini-layout fluid">
+        <div class="mini-layout-sidebar"></div>
+        <div class="mini-layout-body"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span2"&gt;
+      &lt;!--Sidebar content--&gt;
+    &lt;/div&gt;
+    &lt;div class="span10"&gt;
+      &lt;!--Body content--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+
+<!-- Responsive design
+================================================== -->
+<section id="responsive">
+  <div class="page-header">
+    <h1>طراحی واکنشی <small>استفاده از مدیا کوئری برای دستگاهها و ابعاد متفاوت</small></h1>
+  </div>
+  <!-- Supported devices -->
+  <div class="row">
+    <div class="span4">
+      <p><img src="img/responsive-illustrations.png" alt="Responsive devices"></p>
+      <h3>ما چه کرده ایم</h3>
+      <p>سی اس اس مدیا کوئری این امکان را می دهد تا ما برای شرایط متفاوت سی اس اس های متفاوت را اجرا نماییم که معمولا بر روی  <code>min-width</code> و <code>max-width</code> تمرکز دارد.</p>
+      <ul>
+        <li>تغییر عرض ستون های گرید ما</li>
+        <li>جابجای حالت شناور و ابعاد آن</li>
+        <li>تغییر اندازه فونت و برخی الملنها با توجه به دستگاه</li>
+      </ul>
+      <p>استفاده از این تکنیک برای آغاز کار برای کاربران موبایل مناسب است. شاید برای پروژه های بزرگ تر و پیچیده تر لازم باشد طراحی متفاوتی صورت گیرد.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h2>دستگاههای پشتیبانی شده</h2>
+      <p>کوک با تجمیع این ابزار در یک فایل، قابلیت نمایش متفاوت در دستگاه های زیر را می دهد:</p>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>نام</th>
+            <th>عرض طرح بندی</th>
+            <th>عرض ستون ها</th>
+            <th>فاصله ستون ها</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>تلفن های هوشمند</td>
+            <td>480px and below</td>
+            <td class="muted" colspan="2">ستون های روان، نه با عرض مشخص</td>
+          </tr>
+          <tr>
+            <td>تلفن هوشمند تا تبلت</td>
+            <td>767px and below</td>
+            <td class="muted" colspan="2">ستون های روان، نه با عرض مشخص</td>
+          </tr>
+          <tr>
+            <td>تبلت های پرتریت</td>
+            <td>768px and above</td>
+            <td>42px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>پیش فرض</td>
+            <td>980px and up</td>
+            <td>60px</td>
+            <td>20px</td>
+          </tr>
+          <tr>
+            <td>صفحه نمایش بزرگ</td>
+            <td>1200px and up</td>
+            <td>70px</td>
+            <td>30px</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>متا تگ ضروری</h3>
+      <p>برای اطمینان از صحت کار حتما این متا تگ را در صفحه خودتان قرار دهید.</p>
+      <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+  <br>
+
+  <!-- Media query code -->
+  <h2>استفاده از مدیا کوئری</h2>
+  <div class="row">
+    <div class="span4">
+      <p>کوک به صورت اتوماتیک در فایل اصلی سی اس اس خودش، فایل طراحی واکنشی را قرار نداده است اما با چند روش بسیار ساده شما می توانید از آن استفاده نمایید:</p>
+      <ol>
+        <li>کامپایل فایل اختصاصی bootstrap-responsive.less</li>
+        <li>افزودن @import به فایل اصلی سی اس اس کوک و کامپایل آن</li>
+        <li>استفاده مستقیم از فایل bootstrap-responsive.cs آماده شده در پروژه</li>
+      </ol>
+      <p><strong>چرا خودمان قرار ندادیم?</strong>واقعیت این است که این سبک از طراحی در بسیاری از موارد جز اصلی نبوده و نیاز به استفاده از |آن نیست.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+<pre class="prettyprint linenums">
+  // Landscape phones and down
+  @media (max-width: 480px) { ... }
+
+  // Landscape phone to portrait tablet
+  @media (max-width: 768px) { ... }
+
+  // Portrait tablet to landscape and desktop
+  @media (min-width: 768px) and (max-width: 980px) { ... }
+
+  // Large desktop
+  @media (min-width: 1200px) { .. }
+</pre>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+  <br>
+
+  <!-- Responsive utility classes -->
+  <h2>کلاس های سودمند طراحی واکنشی</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>این ها چه هستند</h2>
+      <p>برای سرعت بخشیدن به طراحی های موبایل بیس، ابزارهایی هستند که به شما کمک می کند برخی از الملنها را پنهان یا پیدا نمایید.</p>
+      <h3>کی استفاده نماییم</h2>
+      <p>معمولا بدرد پروژه هایی می خورد که اختلاف اصلی در ساختار در دستگاههای متفاوت نداشته باشد و نه برای تغییرات بسیار کلی و پیچیده.</p>
+      <p>مثلا شما قصد نمایش امان  <code>&lt;select&gt;</code> را در منوی موبایل دارید و نه در دسکتاب یا تبلت.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>کلاس های پشتیبان کننده</h3>
+      <p>کلاس هایی که برای استفاده در مدیا کوئری استفاده شده است را می توانید در اینجا ببینید (تفکیک شده توسط دستگاه). شما می توانید این ها را در فایل  <code>responsive.less</code> بیابید.</p>
+      <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+          <tr>
+            <th>کلاس</th>
+            <th>تلفن ها <small>480px و کمتر</small></th>
+            <th>تبلت ها <small>767px و کمتر</small></th>
+            <th>دسکتاپ <small>768px و بیشتر</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><code>.visible-phone</code></th>
+            <td class="is-visible">پیدا</td>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-hidden">پنهان</td>
+          </tr>
+          <tr>
+            <th><code>.visible-tablet</code></th>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-visible">پیدا</td>
+            <td class="is-hidden">پنهان</td>
+          </tr>
+          <tr>
+            <th><code>.visible-desktop</code></th>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-visible">پیدا</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-phone</code></th>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-visible">پیدا</td>
+            <td class="is-visible">پیدا</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-tablet</code></th>
+            <td class="is-visible">پیدا</td>
+            <td class="is-hidden">پنهان</td>
+            <td class="is-visible">پیدا</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-desktop</code></th>
+            <td class="is-visible">پیدا</td>
+            <td class="is-visible">پیدا</td>
+            <td class="is-hidden">پنهان</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>آزمایش این مورد</h3>
+      <p>مثلا با تغییر ابعاد و یا تغییر دستگاه مورد نظرتان این گزینه ها فعال می شوند.</p>
+      <h4>نمایش در...</h4>
+      <ul class="responsive-utilities-test">
+        <li>Phone<span class="visible-phone">&#10004; تلفن</span></li>
+        <li>Tablet<span class="visible-tablet">&#10004; تبلت</span></li>
+        <li>Desktop<span class="visible-desktop">&#10004; دسکتاپ</span></li>
+      </ul>
+      <h4>پنهان در ...</h4>
+      <ul class="responsive-utilities-test hidden-on">
+        <li>Phone<span class="hidden-phone">&#10004; تلفن</span></li>
+        <li>Tablet<span class="hidden-tablet">&#10004; تبلت</span></li>
+        <li>Desktop<span class="hidden-desktop">&#10004; دسکتاپ</span></li>
+      </ul>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+      
+  <div class="row">
+    <div class="span4">
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">بالا</a></p><br/>
+        <p>توسعه داده شده توسط تیم نرم افزاری تترا</p>
+        <p>پیشنهاد و نظرتان را با<a href="mailto:r.afzali@yahoo.com"> ما</a> در میان بگذرید</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+     <!-- the javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="../js/uikit/transition.js"></script>
+    <script src="../js/uikit/alert.js"></script>
+    <script src="../js/uikit/modal.js"></script>
+    <script src="../js/uikit/dropdown.js"></script>
+    <script src="../js/uikit/scrollspy.js"></script>
+    <script src="../js/uikit/tab.js"></script>
+    <script src="../js/uikit/tooltip.js"></script>
+    <script src="../js/uikit/popover.js"></script>
+    <script src="../js/uikit/button.js"></script>
+    <script src="../js/uikit/collapse.js"></script>
+    <script src="../js/uikit/carousel.js"></script>
+    <script src="../js/uikit/typeahead.js"></script>
+    <script src="js/application.js"></script>
+
+  </body>
+</html>

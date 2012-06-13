@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <title>اجزاء سی اس اس · کوک</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- the styles -->
+    <link href="css/uikit-.1.0.1.min.css" rel="stylesheet">
+    <link href="css/uikit-responsive.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- the HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- the fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">کوک</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li>
+                <a href="./index.html">آغازه</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">ساختاری</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html"> سی اس اس پایه ای</a>
+              </li>
+              <li class="active">
+                <a href="./components.html">اجزاء سی اس اسی</a>
+              </li>
+              
+              <li class="">
+                <a href="./javascript.html">جاوا اسکریپت</a>
+              </li><!--
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
+              </li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <h1>اجزا سی اس اسی</h1>
+  <p class="lead">چندین جز قابل استفاده مجدد و مفید برای استفاده در صفحات مانند منوها، پیغام ها و ... .</p>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">دکمه ها <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#buttonGroups">دکمه های گروهی</a></li>
+          <li><a href="#buttonDropdowns">دکمه های کشویی</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">نوار راهبری <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#navs">دکه، تب و منو</a></li>
+          <li><a href="#navbar">نوار منو</a></li>
+          <li><a href="#breadcrumbs">مسیر پیمایش</a></li>
+          <li><a href="#pagination">صفحه شمار</a></li>
+        </ul>
+      </li>
+      <li><a href="#labels">لیبل</a></li>
+      <li><a href="#badges">نشان ها</a></li>
+      <li><a href="#typography">تاپیوگرافی</a></li>
+      <li><a href="#thumbnails">تصاویر کوچک</a></li>
+      <li><a href="#alerts">اعلام ها</a></li>
+      <li><a href="#progress">نوار پیشرفت</a></li>
+      <li><a href="#misc">سایر</a></li>
+    </ul>
+  </div>
+</header>
+
+
+
+<!-- Button Groups
+================================================== -->
+<section id="buttonGroups">
+  <div class="page-header">
+    <h1>دکمه های گروهی <small>شبیه شدن بیشتر دکمه ها به دکمه های نوار ابزار برای افزایش قابلیت کاربری</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>دکمه های گروهی</h3>
+      <p>برای تجمیع دکمه ها در یک گروه مشخص. که توسط  چیتش ردیفی الملن های <code>&lt;a&gt;</code> یا <code>&lt;button&gt;</code> ایجاد می شود.</p>
+      <h3>پیشنهاد ما</h3>
+      <p>ما به شما یکی از راه های زیر را برای استفاده از این جزء پیشنهاد می کنیم:</p>
+      <ul>
+        <li>از الملن های یکسان در یک گروه استفاده شود, <code>&lt;a&gt;</code> یا <code>&lt;button&gt;</code>.</li>
+        <li>از رنگ های متفاوت در یک گروه استفاده نشود.</li>
+        <li>توجه داشته باشید که مشخه title و alt را در تمامی دکمه پر نمایید .</li>
+      </ul>
+      <p><span class="label label-info">توجه</span> در حالت استفاده همزمان از دکمه های گروهی و دکمه های کشویی شروط حالت کشویی باید اعمال شود.</p>
+    </div>
+    <div class="span4">
+      <h3>مثال پیش فرض</h3>
+      <p>چگونگی ساختار کد شما را برای ایجاد یک دکمه گروه نشان می دهد:</p>
+      <div class="">
+        <div class="btn-group" style="margin: 9px 0;">
+          <button class="btn">چپ</button>
+          <button class="btn">وسط</button>
+          <button class="btn">راست</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;1&lt;/button&gt;
+  &lt;button class="btn"&gt;2&lt;/button&gt;
+  &lt;button class="btn"&gt;3&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+      <h3>مثال نوار ابزار</h3>
+      <p>ترکیب چند <code>&lt;div class="btn-group"&gt;</code> در یک <code>&lt;div class="btn-toolbar"&gt;</code> شما را قادر به ساختن حالت زیر می نماید.</p>
+      <div class="btn-toolbar ltr">
+        <div class="btn-group">
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">4</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">7</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn">8</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>قابلیت چک باکسی یا رادیویی</h3>
+      <p>شما می توانید از گروه دکمه ایی به دو صورت رادیویی یا چک باکسی استفاده نمایید.</p>
+      <p><a class="btn js-btn" href="./javascript.html#buttons">مثال جاوا اسکریپتی &raquo;</a></p>
+      <h3>دکمه کشویی در دکمه ی گروهی</h3>
+      <p><span class="label label-info">دقت نمایید!</span> هر دکمه کشویی باید به صورت مجزا در یک  <code>.btn-group</code> قرار داشته باشد که داخل <code>.btn-toolbar</code>باشد که آماده نمایش صحیح شود.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Split button dropdowns
+================================================== -->
+<section id="buttonDropdowns">
+  <div class="page-header">
+    <h1>دکمه های کشویی<small>ساختار منوی کشویی بروی دکمه ها</small></h1>
+  </div>
+
+  <h2>دکمه های کشویی</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>توضیح و مثال</h3>
+      <p>تبدیل تمامی دکمه ها با قرار دادن تگ  <code>.btn-group</code> و افزودن تگ های مورد نیاز منو.</p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">فعالیت <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">فعالیت <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">خطر <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">اخطار <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">موفق <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">اطلاعی <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">معکوس <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+    </div>
+    <div class="span8">
+      <h3>مثال های اچ تی ام ال </h3>
+      <p>مانند یک دکمه است و فقط برخی از المان ها برای ایجاد حالت کشویی اضافه شده است.</p>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    فعالیت
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>کار با تمامی اندازه ها</h3>
+      <p>دکمه کشویی در تمامی ابعاد کار میکند. مانند <code>.btn-large</code>, <code>.btn-small</code>, یا <code>.btn-mini</code>.</p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">دکمه بزرگ <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">دکمه کوچکتر <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">دکمه کوچولو <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+    </div><!--/span-->
+    <div class="span4">
+      <h3>نیاز به جاوا اسکریپت</h3>
+      <p>دکمه کشویی نیاز به <a href="./javascript.html#dropdowns">پلاگین کشویی کوک</a> برای فعالیت دارد.</p>
+      <p>در بعضی موارد&mdash;مثلا در موبایل&mdash;دکمه کشویی ممکن است از کادر خارج شود. برای حل این مشکل شما باید با توجه به برنامه تان قسمت هایی جاوا اسکریپتی اضافه کنید.</p>
+    </div><!--/span-->
+  </div><!--/row-->
+  <br>
+
+  <h2>دکمه کشویی مجزا</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>توضیح و مثال</h3>
+      <p>با همان ساختار قبلی ما قادریم به سادگی یک دکمه مجزا ایجاد نماییم. این نوع دکمه یکی از استانداردهای مورد استفاده در وب و نرم افزار می باشد.</p>
+      <div class="btn-toolbar" style="margin-top: 18px;">
+        <div class="btn-group">
+          <button class="btn">فعالیت</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-primary">فعالیت</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-danger">خطر</button>
+          <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-warning">اخطار</button>
+          <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-success">موفق</button>
+          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-info">اطلاعی</button>
+          <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-inverse">معکوس</button>
+          <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <h3>اندازه ها</h3>
+      <p>مانند بالا برای تمامی اندازه ها <code>.btn-mini</code>, <code>.btn-small</code>, یا <code>.btn-large</code>.</p>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-large">دکمه بزرگ</button>
+          <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+           <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-small">دکمه کوچک تر</button>
+          <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-mini">دکمه کوچولو</button>
+          <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  ...
+  &lt;ul class="dropdown-menu pull-left"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>مثال های اچ تی ام ال</h3>
+      <p>در واقع کافی است برای این کار از یک المان عادی دکمه استفاده نمایید و مانند مثال زیر عمل نمایید.</p>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;فعالیت&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+      <h3>منوی کشویی بالا رونده</h3>
+      <p>با افزودن به کلاس پرنت <code>.dropdown-menu</code> می توان یم منوی کشویی بالا رونده داشت. این عمل باعث چرخش مناسب <code>.caret</code> و حرکت به سمت بالای منو می شود.</p>
+      <div class="btn-toolbar" style="margin-top: 9px;">
+        <div class="btn-group dropup">
+          <button class="btn">بالارونده</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group dropup">
+          <button class="btn primary">بالارونده چپ گرا</button>
+          <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <ul class="dropdown-menu pull-left">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Nav, Tabs, & Pills
+================================================== -->
+<section id="navs">
+  <div class="page-header">
+    <h1>منو، تب و دکمه <small>لیست هایی با قابلیت تغییر پذیری بالا</small></h1>
+  </div>
+
+  <h2>پیش فرض سبک <small>نشانگذاری عادی، کلاس های متفاوت</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>کلاس اولیه قدرتمند</h3>
+      <p>تمامی منوهای لیست محور &mdash;تب، دکمه و لیست&mdash;<strong>سبک و نشانگذاری مشترک دارند</strong> که در کلاس <code>.nav</code> می باشد.</p>
+      <h3>زمان استفاده</h3>
+      <p>برای ارتباط بین مطالب در یک یا چند صفحه جز بهترین راه ها می توان حساب کرد.</p>
+      <h3>قابلیت چینش</h3>
+      <p>برای چینش مورد نظر از کلاس <code>.pull-left</code> یا <code>.pull-right</code>استفاده نمایید. هر کدام از این کلاس ها دایرکشن مشخص خود را نیز دازا می باشند.</p>
+    </div>
+    <div class="span4">
+      <h3>تب اولیه</h3>
+      <p>از یک تگ عادی <code>&lt;ul&gt;</code> و لینک ها استفاده می شود به همراه کلاس <code>.nav-tabs</code>:</p>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">پروفایل</a></li>
+        <li><a href="#">پیام ها</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;آغازه&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>منوی دکمه ای عادی</h3>
+      <p>مانند حالت قبل فقط کلاس <code>.nav-pills</code>را قرار دهید:</p>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">پروفایل</a></li>
+        <li><a href="#">پیام ها</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;آغازه&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2> حالت پوشاننده کامل<small>قابلیت عمودی شدن تب و  ...</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>چگونگی کار</h3>
+      <p>کافی است به آن تب یا دکمه خود کلاس , <code>.nav-stacked</code> را بیفزاییم, تا به صورت عمودی قابل مشاهده شود.</p>
+    </div>
+    <div class="span4">
+      <h3>تب در حالت کامل</h3>
+      <ul class="nav nav-tabs nav-stacked">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">پروفایل</a></li>
+        <li><a href="#">پیام ها</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>دکمه ها در حالت کامل</h3>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">پروفایل</a></li>
+        <li><a href="#">پیام ها</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>حالت کشویی <small>برای هدایت پیچیده تر در منوها</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>ساخت ساده منوهای پیچیده تر</h3>
+      <p>برای داشتن این قابلیت فقط کافی است مقداری نشانگذاری و کمی کد جاوا اسکریپت افزوده شود.</p>
+      <p>برای اطلاعات بیشتر می توانید به قسمت  <a href="./javascript.html#tabs">مقدمات منوی کشویی</a> مراجعه نمایید.</p>
+    </div>
+    <div class="span4">
+      <h3>تب با حالت کشویی</h3>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">راهنما</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">کشویی <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">کشویی بالارونده <b class="caret bottom-up"></b></a>
+          <ul class="dropdown-menu bottom-up pull-left">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        کشویی
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>دکمه ها با حالت کشویی</h3>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">آغازه</a></li>
+        <li><a href="#">راهنما</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">کشویی <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">کشویی بالارونده <b class="caret bottom-up"></b></a>
+          <ul class="dropdown-menu bottom-up pull-left">
+            <li><a href="#">فعالیت</a></li>
+            <li><a href="#">فعالیت دیگر</a></li>
+            <li><a href="#">عملکرد</a></li>
+            <li class="divider"></li>
+            <li><a href="#">لینک مجزا</a></li>
+          </ul>
+        </li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        کشویی
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>لیست منو <small>ساخت آسان و ظاهری زیبا، بهترین انتخاب منوی کناری</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>ساختار شبیه نرم افزار</h3>
+      <p>شما می توانید با اقدامات بسیار ساده ای لیست زیبایی به عنوان منو داشته باشید شبیه سیستم عامل مک.</p>
+      <p>روند این طراحی نیز مانند تب  و منوی دکمه ای است و قابلیت های متفاوتی دارد.</p>
+      <hr>
+      <h4>قابلیت آیکون دار شدن</h4>
+      <p>به سادگی و با افزودن تگ  <code>&lt;i&gt;</code> و کلاس مورد نظر آیکون را می توانید در این ساختار قرار دهید.</p>
+      <h4>تقسیم کننده افقی</h4>
+      <p>با افزودن کلاس <code>.divider</code>می توانید براحتی یک جدا کننده داشته باشید مثل:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>مثال لیست منو</h3>
+      <p>به یک لیست ساده از لینک ها را با کلاس  <code>class="nav nav-list"</code> نگاه کنید:</p>
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">عنوان لیست</li>
+          <li class="active"><a href="#">آغازه</a></li>
+          <li><a href="#">کتابخانه</a></li>
+          <li><a href="#">نرم افزارها</a></li>
+          <li class="nav-header">عنوان دیگر</li>
+          <li><a href="#">پروفایل</a></li>
+          <li><a href="#">تنظیمات</a></li>
+          <li class="divider"></li>
+          <li><a href="#">راهنما</a></li>
+        </ul>
+      </div> <!-- /well -->
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;
+    عنوان لیست
+  &lt;/li&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;آغازه&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;کتابخانه&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>مثالی با آیکون</h3>
+      <p>همان مثال فقط با آیکون در تگ <code>&lt;i&gt;</code> و آیکون مورد نظر.</p>
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">عنوان لیست</li>
+          <li class="active"><a href="#"><i class="icon-white icon-home"></i> آغازه</a></li>
+          <li><a href="#"><i class="icon-book"></i> کتابخانه</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> نرم افزارها</a></li>
+          <li class="nav-header">عنوان دیگر</li>
+          <li><a href="#"><i class="icon-user"></i> پروفایل</a></li>
+          <li><a href="#"><i class="icon-cog"></i> تنظیمات</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><i class="icon-flag"></i> راهنما</a></li>
+        </ul>
+      </div> <!-- /well -->
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  ...
+  &lt;li&gt;
+    &lt;a href="#"&gt;
+      &lt;i class="icon-book"&gt;&lt;/i&gt;
+      کتابخانه
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+
+  <h2>تب منو <small>فعال سازی تب با جاوااسکریپت</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>چگونه</h3>
+      <p>با افزودن قسمت های مشخص جاوا اسکریپت به تب اولیه ما این نوع تب را می سازیم و در چهار وضعیت بالا، پایین، چپ و راست آماده هست.</p>
+      <p>که با مقدار جزیی تغییرات در نشانگذاری قادر به تغییر حالات هستید.</p>
+    </div>
+    <div class="span4">
+      <h3>مثال</h3>
+      <p>برای این کار کافیست کد الملن با کلاس <code>.nav-tabs</code> را در یک المان دیگر با کلاس <code>.tabbable</code> قرار دهید.</p>
+      <div class="tabbable" style="margin-bottom: 9px;">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#1" data-toggle="tab">بخش 1</a></li>
+          <li><a href="#2" data-toggle="tab">بخش 2</a></li>
+          <li><a href="#3" data-toggle="tab">بخش 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="1">
+            <p>من بخش 1ام.</p>
+          </div>
+          <div class="tab-pane" id="2">
+            <p>درسته، من بخش 2ام.</p>
+          </div>
+          <div class="tab-pane" id="3">
+            <p>بازم می گم باور کن من بخش 3ام.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+    </div>
+    <div class="span4">
+      <h3>پلاگین جاوا اسکریپت</h3>
+      <p>برای مطالعه دقیق تر در مورد تب می توانید به بخش زیر مراجعه نمایید.</p>
+      <p><a class="btn" href="./javascript.html#tabs">مشاهده جاوا اسکریپت &rarr;</a></p>
+    </div>
+  </div>
+
+  <h3>نشانگذاری مرتبط</h3>
+  <p>برای درک بهتر به مثال زیر دقت نمایید که چگونه ما از تگ هاو کلاس ها استفاده کرده ایم تا تب را بسازیم.</p>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#1" data-toggle="tab"&gt;بخش 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#2" data-toggle="tab"&gt;بخش 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="1"&gt;
+      &lt;p&gt;من بخش 1ام.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="2"&gt;
+      &lt;p&gt;درسته، من بخش 2ام.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  <h3>تب در حالات متفاوت</h3>
+  <div class="row">
+    <div class="span4">
+      <h4>تب در پایین</h4>
+      <p>چرخش و چینش مناسب تب در پایین مطلب.</p>
+      <div class="tabbable tabs-below">
+        <div class="tab-content">
+          <div class="tab-pane active" id="A">
+            <p>من بخش 1ام.</p>
+          </div>
+          <div class="tab-pane" id="B">
+            <p>درسته، من بخش 2ام.</p>
+          </div>
+          <div class="tab-pane" id="C">
+            <p>بازم می گم باور کن من بخش 3ام.</p>
+          </div>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#A" data-toggle="tab">بخش 1</a></li>
+          <li><a href="#B" data-toggle="tab">بخش 2</a></li>
+          <li><a href="#C" data-toggle="tab">بخش 3</a></li>
+        </ul>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums" style="margin-top: 11px;">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h4>تب در چپ</h4>
+      <p>قرار گیری تب در چپ و مطلب در راست.</p>
+      <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#lA" data-toggle="tab">بخش 1</a></li>
+          <li><a href="#lB" data-toggle="tab">بخش 2</a></li>
+          <li><a href="#lC" data-toggle="tab">بخش 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="lA">
+            <p>من بخش 1ام.</p>
+          </div>
+          <div class="tab-pane" id="lB">
+            <p>درسته، من بخش 2ام.</p>
+          </div>
+          <div class="tab-pane" id="lC">
+            <p>بازم می گم باور کن من بخش 3ام.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h4>تب در راست</h4>
+      <p>قرارگیری تب در راست و مطلب در چپ.</p>
+      <div class="tabbable tabs-right">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#rA" data-toggle="tab">بخش 1</a></li>
+          <li><a href="#rB" data-toggle="tab">بخش 2</a></li>
+          <li><a href="#rC" data-toggle="tab">بخش 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="rA">
+            <p>من بخش 1ام.</p>
+          </div>
+          <div class="tab-pane" id="rB">
+            <p>درسته، من بخش 2ام.</p>
+          </div>
+          <div class="tab-pane" id="rC">
+            <p>بازم می گم باور کن من بخش 3ام.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Navbar
+================================================== -->
+<section id="navbar">
+  <div class="page-header">
+    <h1>نوار منو</h1>
+  </div>
+  <h2>مثال استاتیک نوار منو</h2>
+  <p>یک مثال استاتیک (غیر ثابت) به همراه فرم جستجو و منوی کشویی.</p>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">نام پروژه</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">آغازه</a></li>
+            <li><a href="#">لینک</a></li>
+            <li><a href="#">لینک</a></li>
+            <li><a href="#">لینک</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">کشویی <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">فعالیت</a></li>
+                <li><a href="#">فالیت دیگر</a></li>
+                <li><a href="#">عملکرد</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">عنوان منو</li>
+                <li><a href="#">منوی جداگانه</a></li>
+                <li><a href="#">بازم یک لینک دیگر</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-search pull-right" action="">
+            <input type="text" class="search-query span2" placeholder="جستجو">
+          </form>
+          <ul class="nav pull-left">
+            <li><a href="#">لینک</a></li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">کشویی <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">فعالیت</a></li>
+                <li><a href="#">فالیت دیگر</a></li>
+                <li><a href="#">عملکرد</a></li>
+                <li class="divider"></li>
+                <li><a href="#">لینک مجزا</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+
+  <div class="row">
+    <div class="span8">
+      <h3>ساختار اصلی نوار منو</h3>
+      <p>برای ساخت یک نوارمنو ما به ساختار زیر نیازمندیم که باید پیاده سازی شود.</p>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      <h3>نوار ابزار ثابت</h3>
+      <p>برای ثابت کردن نوار ابزار در امان یا صفحه مورد نظرمان کافیست کلاسهای مورد نظر را به تگ, <code>.navbar</code> بیافزاییم.</p>
+      <div class="row">
+        <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-top"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+        </div><!--/span-->
+        <div class="span4">
+<pre class="prettyprint linenums">
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+        </div><!--/span-->
+      </div><!--/row-->
+      <p>وقتی از حالت ثابت استفاده می کنید فراموش نشود قسمتی که زیر نوار قرار می گیرد را در نظر بگیرید. افزودن 40 پیکسل یا بیشتر به پدینگ  <code>&lt;body&gt;</code>. مطمئن شوید که این کار رابعد از افزودن کلاس اصلی کوک و قبل از کلاس های اصلی واکنش پذیر انجام دهید.</p>
+      <h3>نام محصول یا شرکت</h3>
+      <p>یک لینک ساده برای قرار دادن نام پروژه یا محصول می باشد.</p>
+<pre class="prettyprint linenums">
+&lt;a class="brand" href="#"&gt;
+  نام پروژه
+&lt;/a&gt;
+</pre>
+      <h3>فرم در نوار منو</h3>
+      <p>برای افزودن فرم در نوار منو مانند مثال زیر عمل کنید. برای یک فرم عادی از کلاس <code>.navbar-form</code> و همچنین برای چینش از <code>.pull-left</code> یا <code>.pull-right</code> استفاده کنید.</p>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-form pull-left"&gt;
+  &lt;input type="text" class="span2"&gt;
+&lt;/form&gt;
+</pre>
+      <p>برای استفاده از فرم جستجو از <code>.navbar-search</code> برای ساختار زیباتر استفاده کنید.</p>
+<pre class="prettyprint linenums">
+&lt;form class="navbar-search pull-left"&gt;
+  &lt;input type="text" class="search-query" placeholder="Search"&gt;
+&lt;/form&gt;
+</pre>
+      <h3>نمایش های متفاوت با توجه ساختار واکنشی</h3>
+      <p>برای وضعیت های متفاوتی که در آن قرار دارید شما احتمالا ظاهرهای متفاوت را بخواهید. برای این منظور شما از الملن دیو با کلاس, <code>.nav-collapse.collapse</code> استفاده کنید, و دکمه جمع شونده اضافه کنید به کمک کلاس, <code>.btn-navbar</code>.</p>
+<pre class="prettyprint linenums">
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;نام پروژه&lt;/a&gt;
+
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      <div class="alert alert-info">
+        <strong>دقت نمایید!</strong> ساختار واکنشی به  <a href="./javascript.html#collapse">پلاگین جمع شونده</a> نیازمند است.
+      </div>
+
+    </div><!-- /.span -->
+    <div class="span4">
+      <h3>لینک های منو</h3>
+      <p>برای این کار کافیست از لیست غیر مرتب سازی استفاده نمایید.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#">آغازه&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;لینک&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;لینک&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      <p>برای افزودن جدا کننده کافیست مانند مثال زیر برخورد نمایید:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  ...
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+      <h3>چینش اجزاء</h3>
+      <p>برای چینش اجزا مختلف در نوار منو از <code>.pull-left</code> یا <code>.pull-right</code> استفاد نمایید. هر کدام از کلاس ها حالت شناور و دایرکشن اختصاصی دارند.</p>
+      <h3>افزودن منوی کشویی</h3>
+      <p>افزودن این نوع منو کار بسیار ساده است و فقط به  <a href="./javascript.html/#dropdown">پلاگین جاوااسکریپت</a> خودش را نیازمند است.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="nav"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          حساب
+          &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      <p><a class="btn" href="./javascript.html#dropdowns">نمایش کلاس جاوااسکریپت &rarr;</a></p>
+      <hr>
+      <h3>نوشته در نوار منو</h3>
+      <p>نوشته خود را در یک <code>&lt;p&gt;</code> قرار دهید تا ساختار مناسب پیدا کند.</p>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+
+</section>
+
+
+
+<!-- Breadcrumbs
+================================================== -->
+<section id="breadcrumbs">
+  <div class="page-header">
+    <h1>مسیر پیمایش <small></small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h3>چرا استفاده می کنیم</h3>
+      <p>این ابزار به کاربر این امکان را می دهد که مسیر را که پیموده و همچنین مکانی را که در آن قرار دارد را متوجه شود، هر چند در سیستم های ساده نیازی به استفاده نیست اما وقتی کمی پیچیده کار می کنید لازم است.</p>
+
+      <h3>مثال ها</h3>
+      <p>مثال های متفاوت را زیر از نحوه کار آن مشاهده می کنید.</p>
+      <ul class="breadcrumb">
+        <li class="active">اغازه</li>
+      </ul>
+      <ul class="breadcrumb">
+        <li><a href="#">آغازه</a> <span class="divider">/</span></li>
+        <li class="active">کتابخانه</li>
+      </ul>
+      <ul class="breadcrumb">
+        <li><a href="#">آغازه</a> <span class="divider">/</span></li>
+        <li><a href="#">کتابخانه</a> <span class="divider">/</span></li>
+        <li class="active">اطلاعات</li>
+      </ul>
+    </div>
+    <div class="span6">
+      <h3>نشانگذار</h3>
+      <p>یک لیست ساده و لینک کافیست.</p>
+<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;آغازه&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;کتابخانه&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="active"&gt;اطلاعات&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Pagination
+================================================== -->
+<section id="pagination">
+  <div class="page-header">
+    <h1>صفحه شمار <small>دو پیشنهاد برای نمایش شمارگان اطلاعات</small></h1>
+  </div>
+
+  <h2>صفحه شمار </h2>
+  <div class="row">
+    <div class="span4">
+      <h3>زمان استفاده</h3>
+      <p>برای نمایش بهتر اطلاعات زیاد از جمله نتایج جستجو می توان از این جز استفاده کرد.</p>
+      <h3>لینک صفحات کامل</h3>
+      <p>نمایش لینک صفحات به صورت مشخص در بازه مورد نظرتان. استفاده از <code>.disabled</code> برای لینک های غیر فعال و<code>.active</code> برای صفحه جاری.</p>
+      <h3>چینش منعطف</h3>
+      <p>دارای دو وضعیت چینش برای نمایش بهتر صفحه شمار که شامل : <code>.pagination-centered</code> و <code>.pagination-right</code> می باشد.</p>
+    </div>
+    <div class="span4">
+      <h3>مثال</h3>
+      <p>حالت پیش فرض صفحه شمار دارای چندید شکل متفاوت می باشد.</p>
+      <div class="pagination">
+        <ul>
+          <li class="disabled"><a href="#">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">10</a></li>
+          <li class="active"><a href="#">11</a></li>
+          <li><a href="#">12</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&larr;</a></li>
+          <li class="active"><a href="#">10</a></li>
+          <li class="disabled"><a href="#">...</a></li>
+          <li><a href="#">20</a></li>
+          <li><a href="#">&rarr;</a></li>
+        </ul>
+      </div>
+      <div class="pagination pagination-centered">
+        <ul>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="span4">
+      <h3>نشانگان</h3>
+      <p>تگ <code>&lt;div&gt;</code> که داخلش تگ عادی  <code>&lt;ul&gt;</code> برای شماره صفحه استفاده می شود.</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li>
+    &lt;li class="active"&gt;
+      &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li>
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+
+  <h2>پوینده صفحه <small>برای ایجاد سریع لینک بعدی و قبلی</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>پوینده صفحه چیست</h3>
+      <p>وسیله ساده برای پیمایش سریع و کم حجم صفحات و یا مطالبی که قابلیت آن را داشته باشند مثل آلبوم تصاویر.</p>
+      <h4>قابلیت غیر فعال سازی</h4>
+      <p>به کمک کلاس <code>.disabled</code> شما می توانید یکی از لینک ها را غیر فعال بکنید.</p>
+    </div>
+    <div class="span4">
+      <h3>مثال پیش فرض</h3>
+      <p>به صورت پیش فرض وسط چین است.</p>
+      <ul class="pager">
+        <li><a href="#">قبلی</a></li>
+        <li><a href="#">بعدی</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;قبلی&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;بعدی&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>لینک های مجزا</h3>
+      <p>روش دیگر برای چینش هر لینک در طرفین:</p>
+      <ul class="pager">
+        <li class="previous"><a href="#">&larr; قدیمی تر</a></li>
+        <li class="next"><a href="#">جدیدتر &rarr;</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; قدیمی تر&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;جدیدتر &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Labels
+================================================== -->
+<section id="labels">
+  <div class="page-header">
+    <h1>لیبل های خطی <small>لیبل یا پیغام های خطی</small></h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>لیبل</th>
+        <th>نشانگان</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="label">پیش فرض</span>
+        </td>
+        <td>
+          <code>&lt;span class="label"&gt;پیش فرض&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-success">موفق</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-success"&gt;موفق&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-warning">اخطار</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-warning"&gt;اخطار&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-important">مهم</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-important"&gt;مهم&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-info">اطلاعی</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-info"&gt;اطلاعی&lt;/span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="label label-inverse">معکوس</span>
+        </td>
+        <td>
+          <code>&lt;span class="label label-inverse"&gt;معکوس&lt;/span&gt;</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Badges
+================================================== -->
+<section id="badges">
+  <div class="page-header">
+    <h1>نشان ها <small>تعداد ناخوانده یا موارد مهم</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>درباره نشان</h3>
+      <p>نشان وسیله ساده برای نمایش تعداد عددی موارد مهم در یک دسته می باشد. برای مثال در ایمیل شما و یا موبایل شما در قسمت پیغام ها بوفور استفاده می شود.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>کلاس های موجود</h3>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>نام</th>
+            <th>مثال</th>
+            <th>نشانگان</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              پیش فرض
+            </td>
+            <td>
+              <span class="badge">1</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              موفق
+            </td>
+            <td>
+              <span class="badge badge-success">2</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              اخطار
+            </td>
+            <td>
+              <span class="badge badge-warning">4</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              خطا
+            </td>
+            <td>
+              <span class="badge badge-error">6</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-error"&gt;6&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              اطلاع
+            </td>
+            <td>
+              <span class="badge badge-info">8</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              معکوس
+            </td>
+            <td>
+              <span class="badge badge-inverse">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
+
+<!-- Typographic components
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>اجزا تایپوگرافی <small>برای نمایش زیباتر متون صفحات</small></h1>
+  </div>
+  <h2>واحد  قهرمان</h2>
+  <div class="row">
+    <div class="span4">
+      <p>کوک یکسری اجزا قابل انعطاف و سبک برای متون شما با نام واحد قهرمان در نظر گرفته است. که به زیبایی سایت شما بسیار کمک می کند.</p>
+      <h3>نشانگان</h3>
+      <p>مطلب خود را در <code>div</code> قرار دهید مانند مثال زیر:</p>
+<pre class="prettyprint linenums">
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <div class="hero-unit">
+        <h1>سلام بکس!</h1>
+        <p>یک مثال برای به نمایش در آوردن واحد قهرمان و نحوه ایجاد آن و زیبایی ایجاد شده توسط آن.</p>
+        <p><a class="btn btn-primary btn-large">بیشتر بدانید</a></p>
+      </div>
+    </div>
+  </div><!-- /row -->
+  <h2>عنوان صفحه</h2>
+  <div class="row">
+    <div class="span4">
+      <p>تنظیم ساده برای استفاده از <code>h1</code>برای رسیدن به ساختار واحد و زیبا در فارسی و برای زیبایی بیشتر استفاده همزمان از نوشته جانبی برای آن.</p>
+    </div>
+    <div class="span8">
+      <div class="page-header">
+        <h1>مثال عنوان صفحه <small>بهمراه نوشته جانبی آن</small></h1>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;مثال عنوان صفحه&lt;/h1&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+
+<!-- Thumbnails
+================================================== -->
+<section id="thumbnails">
+  <div class="page-header">
+    <h1>تصاویر کوچک <small>ساختار گرید برای نوشته، عکس و فیلم و ...</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <h2>پیش فرض</h2>
+      <p>کوک برای نمایش حداقلی عکس های لینک شده با حداقل نشانگذاری استفاده می کند.</p>
+      <ul class="thumbnails">
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+        <li class="span3">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="span6">
+      <h2>حالت پیشرفته</h2>
+      <p>شما می توانید در این حالت از تمامی تگ ها برای ایجاد یک سیستم گریدی زیبا استفاده کنید.</p>
+      <ul class="thumbnails">
+        <li class="span3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <div class="caption">
+              <h5>عنوان گرید</h5>
+              <p>متن مورد نظر خودتان را در اینجا می توانید قرار دهید و ببینید که چگونه در این وضعیت دیده می شود و آیا اینکه زیبا هست یا خیر.</p>
+              <p><a href="#" class="btn btn-primary">بسیار خوب</a> <a href="#" class="btn">خوب</a></p>
+            </div>
+          </div>
+        </li>
+        <li class="span3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <div class="caption">
+              <h5>عنوان گرید</h5>
+              <p>متن مورد نظر خودتان را در اینجا می توانید قرار دهید و ببینید که چگونه در این وضعیت دیده می شود و آیا اینکه زیبا هست یا خیر.</p>
+              <p><a href="#" class="btn btn-primary">بسیار خوب</a> <a href="#" class="btn">خوب</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ 
+  <div class="row">
+    <div class="span6">
+      <h2>نشانگزاری</h2>
+      <p>همانطور که می دانید سیستم گرید به این سبک سریع و قدرتمند می باشد شما در اینجا مثال یک ساختار ساده را می بینید :</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span3"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/260x180" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+      <p>برای تغییرات بیشتر شما می توانید به اشکال مختلف برخورد نمایید, مثلا ما بجای <code>&lt;a&gt;</code> از <code>&lt;div&gt;</code>استفاده می کنیم مثل:</p>
+<pre class="prettyprint linenums">
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span3"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="http://placehold.it/260x180" alt=""&gt;
+      &lt;h5&gt;Thumbnail label&lt;/h5&gt;
+      &lt;p&gt;Thumbnail caption right here...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span6">
+      <h2>مثال های بیشتر</h2>
+      <p>شما می توانید با تغییر در کلاس ها و نحوه چینش و همچنین سایز اشکال متفاوتی را ایجاد کنید در نتیجه دست شما باز است و در اینجا ما به نمونه هایی در این زمینه اکتفا می کنیم.</p>
+      <ul class="thumbnails">
+        <li class="span4">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/360x268" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+        <li class="span2">
+          <a href="#" class="thumbnail">
+            <img src="http://placehold.it/160x120" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Alerts & Messages
+================================================== -->
+<section id="alerts">
+  <div class="page-header">
+    <h1>پیغام ها <small>سبکی برای نمایش اعمال موفق، ناموفق و ...</small></h1>
+  </div>
+
+  <h2>پیش فرض سبک</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>بازنویسی کلاس اولیه</h3>
+      <p>در کوک ما کلاس : <code>.alert</code> را از <code>.alert-message</code> ایجاد کردیم. همچنین با حداقل موترد نیاز به ایجاد آن&mdash;بدون نیاز استفاده از <code>&lt;p&gt;</code> بصورت پیش فرض, و فقط استفاده از <code>&lt;div&gt;</code> برای ایجاد یم پیغام جدید.</p>
+      <h3>متن پیغام ساده</h3>
+      <p>برای راحتی بیشتر ما یک سبک ساده را برای پیغام ها و متن آنها در نظر گرفته ایم، اما در صورت لزوم برای داشتن متنی با جزییاتی بیشتر می توانید از <code>.alert-block</code> استفاده نمایید.</p>
+      <hr>
+      <h3>افزودن قابلیت ها با جاوااسکریپت</h3>
+      <p>برای این نوع از اجزا نیز ما کلاس مخصوص جاوا اسکریپت طراحی کرده ایم که برای دیدن آن می توانید روی لینک کلیک کنید.</p>
+      <p><a class="btn js-btn" href="./javascript.html#alerts">جاوا اسکریپت پیغام ها &raquo;</a></p>
+    </div>
+    <div class="span8">
+      <h3>مثال ها</h3>
+      <p>کافی است فقط از یک کلاس مانند زیر استفاده کنید تا متن پیغام شما ظاهر شود.</p>
+      <div class="alert">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>توجه!</strong> بررسی مجدد کنید چون به نظر مشکلی وجود دارد.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;strong&gt;توجه!&lt;/strong&gt;  بررسی مجدد کنید چون به نظر مشکلی وجود دارد.
+&lt;/div&gt;
+</pre>
+      <p>برای داشتن پیغام پیچیده تر کافی است از: <code>.alert-block</code>استفاده کنید و برای داشتن عنوان هم از کلاس  <code>.alert-heading</code> استفاده نمایید.</p>
+      <div class="alert alert-block">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <h4 class="alert-heading">توجه!</h4>
+        <p>بهتر است  مجدد بررسی شود چون مقداری ناهمگونی موجود است. در صورت لزوم این هم متن نوضیحی بیشتر برای اخطاری که رخ داده است در اینجا می باشد است.</p>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;h4 class="alert-heading"&gt;توجه!&lt;/h4&gt;
+  د چون مقداری ناهمگونی موجود است. در صورت لزوم این هم متن نوضیحی بیشتر برای اخطاری که رخ داده است در اینجا می باشد است...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>انواع دیگر پیغام ها <small>افزودن کلاسهایی دیگر برای نمایشی متفاوت</small></h2>
+  <div class="row">
+    <div class="span4">
+      <h3>خطا یا خطر</h3>
+      <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>اخطار!</strong> لطفا بعضی مقدارها راتغییر دهیدی و دوباره تلاش نمایید.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>موفق</h3>
+      <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>بسیار خوب!</strong> مراحل ایجاد کار جدید با موفقیت  به پایان رسید.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>اطلاعی یا خبری</h3>
+      <div class="alert alert-info">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>دقت نمایید!</strong>این پیغام مهمی است ولی خیلی ضروری نیست.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Progress bars
+================================================== -->
+<section id="progress">
+  <div class="page-header">
+    <h1>نوار پیشرفت <small>برای بارگزاری، جابجایی و یا عملی خاص</small></h1>
+  </div>
+
+  <h2>مثال ها و نشانگان</h2>
+  <div class="row">
+    <div class="span4">
+      <h3>ابتدایی</h3>
+      <p>نوار پیشرفت پیش فرض با رنگ اولیه.</p>
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar"
+       style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>خط دار</h3>
+      <p>نوار با طرح خط دار (البته بجز در IE).</p>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 20%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar"
+       style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span4">
+      <h3>متحرک</h3>
+      <p>نوار متحرک و خط دار (باز هم نه در IE).</p>
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 45%"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped
+     active"&gt;
+  &lt;div class="bar"
+       style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>تنظیمات دیگر و سازگاری با مرورگرها</h2>
+  <div class="row">
+    <div class="span3">
+      <h3>رنگ بندی</h3>
+      <p>همانند دکمه ها رنگ بندی متفاوتی می تواند داشته باشد.</p>
+      <div class="progress progress-info" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+     <div class="span3">
+      <h3>خطوط راه راه</h3>
+      <p>همانند رنگ بندی عادی می توانیم خطوط راه راه رنگی داشته باشیم.</p>
+      <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="span3">
+      <h3>نحوه کار</h3>
+      <p>از حرکات در css3 استفاده شده است و اندازه آن را با جاوااسکریپت می توان به نرمی تغییر داد.</p>
+      <p>اگر شما از  <code>.active</code>استفاده می کنید و همچنین از کلاس  <code>.progress-striped</code> استفاده کرده اید حرکتی آرام ازراست به چپ خواهید داشت.</p>
+    </div>
+    <div class="span3">
+      <h3>سازگاری با مرورگرها</h3>
+      <p>از آنجایی که ما برای خطدار کردن و انیمیشن از css3 استفاده می کنیم پس نباید انتظار داشته باشیم خاندان IE(7-9) بتواند آنرا بفهمدو احتمالا نسخه های قدیمی فایرفاکس</p>
+      <p>همچنین اپرا نیز حرکت را با این نوع css3 متوجه نمی شود متاسفانه، باشد آن روزی که تمامی مرورگرها از قوانین جهانی پیروی کنند.</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+<!-- Miscellaneous
+================================================== -->
+<section id="misc">
+  <div class="page-header">
+    <h1>متفرقه <small>اجزا سبک و پرکاربرد</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>کلاس راحت</h2>
+      <p>به کمک راحت شما یک ساختار ساده در اطراف المان خود خواهید داشت.</p>
+      <div class="well">
+        مثلا، این یک المان با راحت است!
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="well"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>آیکون بستن</h2>
+      <p>یک ساختار یکدست برای دکمه بستن.</p>
+      <p><a class="close" style="float: none;">&times;</a></p>
+<pre class="prettyprint linenums">&lt;a class="close"&gt;&amp;times;&lt;/a&gt;</pre>
+    </div><!--/span-->
+  </div><!--/row-->
+</section>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">بالا</a></p><br/>
+        <p>توسعه داده شده توسط تیم نرم افزاری تترا</p>
+        <p>پیشنهاد و نظرتان را با<a href="mailto:r.afzali@yahoo.com"> ما</a> در میان بگذرید</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- the javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="../js/uikit/transition.js"></script>
+    <script src="../js/uikit/alert.js"></script>
+    <script src="../js/uikit/modal.js"></script>
+    <script src="../js/uikit/dropdown.js"></script>
+    <script src="../js/uikit/scrollspy.js"></script>
+    <script src="../js/uikit/tab.js"></script>
+    <script src="../js/uikit/tooltip.js"></script>
+    <script src="../js/uikit/popover.js"></script>
+    <script src="../js/uikit/button.js"></script>
+    <script src="../js/uikit/collapse.js"></script>
+    <script src="../js/uikit/carousel.js"></script>
+    <script src="../js/uikit/typeahead.js"></script>
+    <script src="js/application.js"></script>
+
+
+  </body>
+</html>

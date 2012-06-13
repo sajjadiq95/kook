@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript · KOOK</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="کیت واسط کاربری - کوک">
+        <meta name="author" content="roohullah afzali">
+
+        <!-- the styles -->
+        <link href="css/uikit-.1.0.1.min.css" rel="stylesheet">
+        <link href="css/uikit-responsive.min.css" rel="stylesheet">
+        <link href="css/docs.css" rel="stylesheet">
+        <link href="css/prettify.css" rel="stylesheet">
+
+        <!-- the HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- the fav and touch icons -->
+        <link rel="shortcut icon" href="ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    </head>
+
+    <body data-spy="scroll" data-target=".subnav" data-offset="80">
+
+
+        <!-- Navbar
+          ================================================== -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./index.html">کوک</a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="">
+                                <a href="./index.html">آغازه</a>
+                            </li>
+                            <li class="">
+                                <a href="./scaffolding.html">ساختاری</a>
+                            </li>
+                            <li class="">
+                                <a href="./base-css.html"> سی اس اس پایه ای</a>
+                            </li>
+                            <li class="">
+                                <a href="./components.html">اجزاء سی اس اسی</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="./javascript.html">جاوا اسکریپت</a>
+                            </li>
+                            <!--
+                            <li class="">
+                              <a href="./less.html">Using LESS</a>
+                            </li>
+                            <li class="divider-vertical"></li>
+                            <li class="">
+                              <a href="./download.html">Customize</a>
+                            </li>
+                            <li class="">
+                              <a href="./examples.html">Examples</a>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Masthead
+            ================================================== -->
+            <header class="jumbotron subhead" id="overview">
+                <h1>جاوا اسکریپت</h1>
+                <p class="lead">کلاس های جاوا اسکریپت کوک به کمک  <a href="http://jquery.com/" target="_blank">پلاگین های جی کوئری</a>.
+                <div class="subnav">
+                    <ul class="nav nav-pills">
+                        <li><a href="#javascript">تمامی پلاگین ها</a></li>
+                        <li><a href="#modals">Modal</a></li>
+                        <li><a href="#dropdowns">Dropdown</a></li>
+                        <li><a href="#scrollspy">Scrollspy</a></li>
+                        <li><a href="#tabs">Tab</a></li>
+                        <li><a href="#tooltips">Tooltip</a></li>
+                        <li><a href="#popovers">Popover</a></li>
+                        <li><a href="#alerts">Alert</a></li>
+                        <li><a href="#buttons">Button</a></li>
+                        <li><a href="#collapse">Collapse</a></li>
+                        <li><a href="#carousel">Carousel</a></li>
+                        <li><a href="#typeahead">Typeahead</a></li>
+                    </ul>
+                </div>
+            </header>
+
+
+            <!-- Using Javascript w/ Bootstrap
+            ================================================== -->
+            <section id="javascript">
+                <div class="page-header">
+                    <h1>جی کوئری پلاگین <small>آغازی برای استفاده از جاوا اسکریپت</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#modals">Modals</a></h3>
+                            <p>حداقل کد، اما با قابلیت فراوان برای ایجاد مودال به کمک جاوا اسکریپت</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#dropdowns">Dropdowns</a></h3>
+                            <p>یک منوی کشویی قوی که در اجزا مختلف کوک قابل پیاده سازی است مثل تب، دکمه و ....</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#scrollspy">Scrollspy</a></h3>
+                            <p>به کمک این پلاگین قادریم با توجه به مکان اسکرول، منوی مورد نظر خودمان را در نوار منو فعال کنیم.</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#tabs">Togglable tabs</a></h3>
+                            <p>به کمک این پلاگین قابلیت تب و دکمه های حالت پذیر برای کنترل حالت فعلیشان زیاد می شود.</p>
+                        </label>
+                    </div>
+                </div> <!-- /row -->
+                <div class="row">
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#tooltips">Tooltips</a></h3>
+                            <p>این هم یک پلاگین معروف و بدرد بخور دیگه.</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#popovers">Popovers</a> <small class="muted">*</small></h3>
+                            <p>مکانی برای نمایش اطلاعات بیشتر که به صورت پاپ آور (تولتیپ بزرگتر) دیده می شود.</p>
+                            <p class="muted"><strong>*</strong> به کلاس  <a href="#tooltips">Tooltips</a> برای نمایش نیاز دارد</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#alerts">Alert messages</a></h3>
+                            <p>کلاس یا پلاگین پیغام ها که یکی از پر کاربردترین پلاگین ها.</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#buttons">Buttons</a></h3>
+                            <p>کارهای بیشتری با دکمه می توانید انجام دهید نظیر گروه دکمه ایی و یادکمه های  نوار ابزاری.</p>
+                        </label>
+                    </div>
+                </div> <!-- /row -->
+                <div class="row" style="margin-bottom: 9px;">
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#collapse">Collapse</a></h3>
+                            <p>اساس اجزایی مثل اکاردئون یا نوار راهبری.</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#carousel">Carousel</a></h3>
+                            <p>ابزاری برای ایجاد انواع مختلفی از slide show و حرکت دادن زیبای آن.</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3><a href="./javascript.html#typeahead">Typeahead</a></h3>
+                            <p>ابزاری برای ایجاد پیشنهاد دهنده در فرم ها مانند جستجو و ...</p>
+                        </label>
+                    </div>
+                    <div class="span3">
+                        <label>
+                            <h3>Transitions <small class="muted">*</small></h3>
+                            <p>کلاس پایه ای جاوا اسکریپت برای حرکات و جابجایی ها که می شود در کلاس های متفاوتی استفاده کرد.</p>
+                            <p class="muted"><strong>*</strong> لازم برای حرکت در تمامی پلاگین ها</p>
+                        </label>
+                    </div>
+                </div> <!-- /row -->
+                <div class="alert alert-info"><strong>توجه نمایید!</strong> تمامی این پلاگین ها به کلاس اصلی جی کوئری نیازمند هستند.</div>
+            </section>
+
+
+
+            <!-- Modal
+            ================================================== -->
+            <section id="modals">
+                <div class="page-header">
+                    <h1>مودال ها <small>modal.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>مودال چیست</h3>
+                        <p> حداقل کد، اما با قابلیت فراوان برای ایجاد مودال به کمک جاوا اسکریپت</p>
+                        <a href="../js/uikit/modal.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال ثابت</h2>
+                        <p>در زیر یک مثال تابت از مودال را مشاهده می نمایید.</p>
+                        <div class="well modal-example" style="background-color: #888; border: none;">
+                            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+                                <div class="modal-header">
+                                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                                    <h3>عنوان مودال</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <p>متن دلخواه شما ...</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn">بستن</a>
+                                    <a href="#" class="btn btn-primary">ذخیره تغییرات</a>
+                                </div>
+                            </div>
+                        </div> <!-- /well -->
+
+                        <h2>مثال زنده</h2>
+                        <p>با فشردن دکمه زیر مودالی به صورت حرکت دار و با افکت محو از بالای صفحه ظاهر می شود.</p>
+                        <!-- sample modal content -->
+                        <div id="myModal" class="modal hide fade">
+                            <div class="modal-header">
+                                <a class="close" data-dismiss="modal" >&times;</a>
+                                <h3>عنوان مودال</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h4>متن مودال</h4>
+                                <p>قسمتی از متن مورد نظر شما که می خواهید به نمایش در آورید.</p>
+
+                                <h4>پاپ آور درمودال</h4>
+                                <p>این <a href="#" class="btn popover-test" title="یک عنوان" data-content="و این هم یک متن زیبا در اینجا!">دکمه</a> باید ان را فعال کند.</p>
+
+                                <h4>تولتیپ در مودال</h4>
+                                <p><a href="#" class="tooltip-test" title="تولتیپ">این لینک</a> و <a href="#" class="tooltip-test" title="تولتیپ دیگر"> این لینک</a> تولتیپ را فعال می کند.</p>
+
+                                <hr>
+
+                                <h4>نحوه نمایش اسکرول بار در متون</h4>
+                                <p>ما  متغییر ثابت در نظر می گیریم به نام <code>max-height</code> در <code>.modal-body</code>. و نحوه نمایش متن بلند را مشاهده می کنیم.</p>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                <p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                <p>چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                                <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn" data-dismiss="modal" >بستن</a>
+                                <a href="#" class="btn btn-primary">ذخیره تغییرات</a>
+                            </div>
+                        </div>
+                        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">اجرای مودال زنده</a>
+
+                        <hr>
+
+                        <h2>نحوه استفاده</h2>
+                        <p>اجرای آن توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('#myModal').modal(options)</pre>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 50px;">نوع</th>
+                                    <th style="width: 50px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>backdrop</td>
+                                    <td>boolean</td>
+                                    <td>true</td>
+                                    <td>افزودن الملن back-drop به زیر پیغام اصلی، بخصوص زمانی که نمی خواهید پنجره شما با کلیک بسته شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>keyboard</td>
+                                    <td>boolean</td>
+                                    <td>true</td>
+                                    <td>بستن مودال به کمک دکمه escape کیبرد</td>
+                                </tr>
+                                <tr>
+                                    <td>show</td>
+                                    <td>boolean</td>
+                                    <td>true</td>
+                                    <td>نمایش مودال پس از initialize.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>نشانگان</h3>
+                        <p>ما می توانیم مودال را بدون جاوا اسکریپت هم اجرا کنیم. کافیست  <code>data-toggle="modal"</code> و  <code>data-target="#foo"</code> یا <code>href="#foo"</code> را همانند مثال زیر بکار ببرید.</p>
+                        <pre class="prettyprint linenums">
+&lt;a class="btn" data-toggle="modal" href="#myModal" &gt;اجرای مودال&lt;/a&gt;
+                        </pre>
+
+                        <pre class="prettyprint linenums">
+&lt;div class="modal" id="myModal"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;a class="close" data-dismiss="modal"&gt;&times;&lt;/a&gt;
+    &lt;h3&gt;عنوان مودال&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;متن مودال…&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;بستن&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;ذخیره تغییرات&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                        </pre>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong> اگر قصد افزودن افکت را دارید کافی است کلاس <code>.fade</code> را به المان <code>.modal</code> خود بفزاید و فایل transition.js را در صفحه صدا بزنید.
+                        </div>
+                        <h3>روش ها</h3>
+                        <h4>دلخواه ها در مودال</h4>
+                        <p>برای فعال سازی مودال شما می توانید از دلخواه های مورد نظر خود در قالب  <code>object</code> استفاده نمایید.</p>
+                        <pre class="prettyprint linenums">
+$('#myModal').modal({
+  keyboard: false
+})</pre>
+                        <h4>تغییر دهنده</h4>
+                        <p>روش دستی تغییر دهنده در مودال.</p>
+                        <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
+                        <h4>نمایش</h4>
+                        <p>نمایش دستی مودال.</p>
+                        <pre class="prettyprint linenums">$('#myModal').modal('show')</pre>
+                        <h4>پنهان نمودن</h4>
+                        <p>پنهان نمودن مودال.</p>
+                        <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
+                        <h3>رخدادها</h3>
+                        <p>رخ دادهای متفاوتی در مودال دیده شده است.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">رخ داد</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>show</td>
+                                    <td>این رخداد بلافاصله پس از صدا زدن  <code>show</code> صدا زده می شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>shown</td>
+                                    <td>زمانی صدا زده می شود که مودال توسط کاربر دیده می شود (البته منتظر می ماند که انیمیشن کامل شود).</td>
+                                </tr>
+                                <tr>
+                                    <td>hide</td>
+                                    <td>این رخداد بلافاصله پس از صدا زدن  <code>hide</code> صدا زده می شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>hidden</td>
+                                    <td>زمانی صدا زده می شود که مودال توسط کاربر دیده می شود (البته منتظر می ماند که انیمیشن کامل شود).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="prettyprint linenums">
+$('#myModal').on('hidden', function () {
+  // do something…
+})</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Dropdown
+            ================================================== -->
+            <section id="dropdowns">
+                <div class="page-header">
+                    <h1>پایین رونده <small>dropdown.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>پایین رونده چیست</h3>
+                        <p>ایجاد منوی پایین رونده در مکان های که نیاز به آن هست نظیر تب، دکمه، منو و ...</p>
+                        <a href="../js/uikit/dropdown.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال ها</h2>
+                        <p>برای تست ان می توانید بر روی دکمه موجود در نوار منو و یا دکمه ها کلیک کنید.</p>
+                        <div id="navbar-example" class="navbar navbar-static">
+                            <div class="navbar-inner">
+                                <div class="container" style="width: auto;">
+                                    <a class="brand" href="#">نام پروژه</a>
+                                    <ul class="nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">پایین رونده <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">انجام</a></li>
+                                                <li><a href="#">انجام دادن</a></li>
+                                                <li><a href="#">انجام ندادن</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">لینک مجزا</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">پایین رونده 2 <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">انجام</a></li>
+                                                <li><a href="#">انجام دادن</a></li>
+                                                <li><a href="#">انجام ندادن</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">لینک مجزا</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav pull-left">
+                                        <li id="fat-menu" class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">پایین رونده 3 <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">انجام</a></li>
+                                                <li><a href="#">انجام دادن</a></li>
+                                                <li><a href="#">انجام ندادن</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">لینک مجزا</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- /navbar-example -->
+
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">لینک عادی</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">پایین رونده <b class="caret"></b></a>
+                                <ul id="menu1" class="dropdown-menu">
+                                    <li><a href="#">انجام</a></li>
+                                    <li><a href="#">انجام دادن</a></li>
+                                    <li><a href="#">انجام ندادن</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">لینک مجزا</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">پایین رونده 2 <b class="caret"></b></a>
+                                <ul id="menu2" class="dropdown-menu">
+                                    <li><a href="#">انجام</a></li>
+                                    <li><a href="#">انجام دادن</a></li>
+                                    <li><a href="#">انجام ندادن</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">لینک مجزا</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">پایین رونده 3 <b class="caret"></b></a>
+                                <ul id="menu3" class="dropdown-menu">
+                                    <li><a href="#">انجام</a></li>
+                                    <li><a href="#">انجام دادن</a></li>
+                                    <li><a href="#">انجام ندادن</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">لینک مجزا</a></li>
+                                </ul>
+                            </li>
+                        </ul> <!-- /tabs -->
+
+                        <hr>
+
+                        <h2>نحوه استفاده</h2>
+                        <p>اجرا توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
+                        <h3>نشانگان</h3>
+                        <p>به کلاس  <code>data-toggle="dropdown"</code> برای فعال سازی دقت نمایید.</p>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong> شما می توانید برای مشخص نمودن هدف از  <code>data-target="#fat"</code> یا <code>href="#fat"</code> استفاده نمایید.
+                        </div>
+
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;لینک عادی&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="dropdown" id="menu1"&gt;
+    &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#menu1"&gt;
+      پایین رونده
+      &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;انجام&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;انجام دادن&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;انجام ندادن&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;لینک مجزا&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</pre>
+                        <h3>روش ها</h3>
+                        <h4 class="ltr" style="text-align: right">$().dropdown()</h4>
+                        <p>نحوه اصلی صدا کردن  کلاس اصلی در جاوا اسکریپت.</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- ScrollSpy
+             ================================================== -->
+            <section id="scrollspy">
+                <div class="page-header">
+                    <h1>اسکرول اسپای <small>scrollspy.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <p>فعال سازی منو بر اساس موقعیت اسکرول.</p>
+                        <a href="../js/uikit/scrollspy.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>اسکرول نمایید اطلاعات زیر را تا تغییرات را مشاهده نمایید!</p>
+                        <div id="navbarExample" class="navbar navbar-static">
+                            <div class="navbar-inner">
+                                <div class="container" style="width: auto;">
+                                    <a class="brand" href="#">نام پروژه</a>
+                                    <ul class="nav">
+                                        <li><a href="#fat">متن 1</a></li>
+                                        <li><a href="#mdo">متن 2</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">پایین رونده <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#one">متن 3</a></li>
+                                                <li><a href="#two">متن 4</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#three">متن 5</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+                            <h4 id="fat">متن 1</h4>
+                            <p>
+                                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                            <h4 id="mdo">متن 2</h4>
+                            <p>
+                                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                            <h4 id="one">متن 3</h4>
+                            <p>
+                                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                            <h4 id="two">متن 4</h4>
+                            <p>
+                                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                            <h4 id="three">متن 5</h4>
+                            <p>
+                                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                            <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                            </p>
+                        </div>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>اجرا توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('#navbar').scrollspy()</pre>
+                        <h3>نشانگان</h3>
+                        <p>برای استفاده بدون جاوا اسکریپت به <code>data-spy="scroll"</code> توجه فرمایید.</p>
+                        <pre class="prettyprint linenums">&lt;body data-spy="scroll" &gt;...&lt;/body&gt;</pre>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong>
+                            برای اجرا درست باید به خصوصیت آی دی توجه نمایید <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> و یا <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.
+                        </div>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 100px;">عنوان</th>
+                                    <th style="width: 50px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>offset</td>
+                                    <td>number</td>
+                                    <td>10</td>
+                                    <td>میزان فاصله از بالا برای محاسبه اسکرول.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Tabs
+            ================================================== -->
+            <section id="tabs">
+                <div class="page-header">
+                    <h1>تب ها <small>tab.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <p>ابزاری برای ایجاد سریع و آسان تب و قابلیت اطلاعات موجود در صفحه.</p>
+                        <a href="../js/uikit/tab.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال ها</h2>
+                        <p>بر روی تب های پایین کلیک کنید تا نحوه کارآن را مشاهده نمایید.</p>
+                        <ul id="tab" class="nav nav-tabs">
+                            <li class="active"><a href="#home" data-toggle="tab">آغازه</a></li>
+                            <li><a href="#profile" data-toggle="tab">پروفایل</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">کشویی <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#dropdown1" data-toggle="tab">قسمت اول</a></li>
+                                    <li><a href="#dropdown2" data-toggle="tab">قسمت دوم</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="home">
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown1">
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای </p>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown2">
+                                <p>لو لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('#myTab').tab('show')</pre>
+                        <h3>نشانگان</h3>
+                        <p>بدون جاوا اسکریپت و با نوشتن کد <code>data-toggle="tab"</code> یا <code>data-toggle="pill"</code> بر روی المان مورد نظر.</p>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;آغازه&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;پروفایل&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;قسمت اول&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;قسمت دوم&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">$().tab</h4>
+                        <p>
+                            برای درک مناسب تر نحوه کار به مثال زیر دقت نمایید.
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;&lt;a href="#home"&gt;آغازه&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile"&gt;پروفایل&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages"&gt;پیام ها&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings"&gt;تنظیمات&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('.tabs a:last').tab('show')
+  })
+&lt;/script&gt;</pre>
+                        <h3>رویدادها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">رویداد</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>show</td>
+                                    <td>این رویداد زمان نمایش تب صدا زده می شود البته قبل از نمایش کامل. با استفاده از <code>event.target</code> و <code>event.relatedTarget</code> شما می توانید تب فعلی و قبلی (اگر موجود باشد) را شناسایی کنید.</td>
+                                </tr>
+                                <tr>
+                                    <td>shown</td>
+                                    <td>زمانی که تب به حالت نمایش کامل می رسد صدا زده می شود.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="prettyprint linenums">
+$('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target // تب فعلی
+  e.relatedTarget // تب قبلی
+})</pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Tooltips
+            ================================================== -->
+            <section id="tooltips">
+                <div class="page-header">
+                    <h1>تولتیپ <small>tooltip.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>تولتیپ چیست؟</h3>
+                        <p>با الگو بر داری از پلاگین تولتیپ Jason Frame; تولتیپ وسیله ای برای نمایش اطلاعات ضروری و فوری که در اینجا به کمک css3 و مشخصه دیتا html5 تقویت شده است.</p>
+                        <a href="../js/uikit/tooltip.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال ها</h2>
+                        <pبرای دیدن آن روی لینک های زیر برود:</p>
+                            <div class="tooltip-demo well">
+                                <p class="muted" style="margin-bottom: 0;">متن مورد نظر خود را در  <a href="#" rel="tooltip" title="اولین تولتیپ">اینجا</a> قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. <a href="#" rel="tooltip" title="تولتیپ دیگر">همچنین شما</a> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. اما <a href="#" rel="tooltip" title="مثال دیگر">واقعا متعجب شده اید</a> وقتی چنین متونی را می بینید و می خواهید <a href="#" rel="tooltip" title="آخرین تولتیپ">بروید</a> .
+                                </p>
+                            </div>
+                            <hr>
+                            <h2>نحوه استفاده</h2>
+                            <p>استفاده از جاوا اسکریپت:</p>
+                            <pre class="prettyprint linenums">$('#example').tooltip(options)</pre>
+                            <h3>دلخواه ها</h3>
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 100px;">نام</th>
+                                        <th style="width: 100px;">نوع</th>
+                                        <th style="width: 50px;">پیش فرض</th>
+                                        <th>توضیح</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>animation</td>
+                                        <td>boolean</td>
+                                        <td>true</td>
+                                        <td>نمایش با افکت ظاهر شدن</td>
+                                    </tr>
+                                    <tr>
+                                        <td>placement</td>
+                                        <td>string|function</td>
+                                        <td>'top'</td>
+                                        <td>محل نمایش تولتیپ - top | bottom | left | right</td>
+                                    </tr>
+                                    <tr>
+                                        <td>selector</td>
+                                        <td>string</td>
+                                        <td>false</td>
+                                        <td>برای فعال سازی تولتیپ بر روی هدف مورد نظر.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>title</td>
+                                        <td>string | function</td>
+                                        <td>''</td>
+                                        <td>متن نمایش داده شونده در تولتیپ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>trigger</td>
+                                        <td>string</td>
+                                        <td>'hover'</td>
+                                        <td>نحوه فعال شدن آن - hover | focus | manual</td>
+                                    </tr>
+                                    <tr>
+                                        <td>delay</td>
+                                        <td>number | object</td>
+                                        <td>0</td>
+                                        <td>
+                                            <p>مدت زمان تاخیر در نمایش و پنهان شدن به میلی ثانیه</p>
+                                            <p>اگر عددی بگذارید در زمان نمایش و پنهان شدن موثر است</p>
+                                            <p>ساختار شی ای آن: <code>delay: { show: 500, hide: 100 }</code></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="alert alert-info">
+                                <strong>توجه نمایید!</strong>
+                                برای اعمال اختصاصی بر روی یک تولتیپ می توانید از خصوصیات دیتا آن المان استفاده نمایید.
+                            </div>
+                            <h3>نشانگان</h3>
+                            <p>شما می توانید به نحوه زیر نیز عمل کنید.</p>
+                            <pre class="prettyprint linenums">
+&lt;a href="#" rel="tooltip" title="اولین تولتیپ"&gt;موس را روی من ببر&lt;/a&gt;
+                            </pre>
+                            <h3>روش ها</h3>
+                            <h4 style="direction: ltr; text-align: right;">$().tooltip(options)</h4>
+                            <p>برای افزودن قابلیت تولتیپ به مجموعه مورد نظر.</p>
+                            <h4 style="direction: ltr; text-align: right;">.tooltip('show')</h4>
+                            <p>نمایش تولتیپ.</p>
+                            <pre class="prettyprint linenums">$('#element').tooltip('show')</pre>
+                            <h4 style="direction: ltr; text-align: right;">.tooltip('hide')</h4>
+                            <p>پنهان سازی تولتیپ.</p>
+                            <pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
+                            <h4 style="direction: ltr; text-align: right;"c>.tooltip('toggle')</h4>
+                            <p>نمایش و پنهان سازی تولتیپ.</p>
+                            <pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Popovers
+            ================================================== -->
+            <section id="popovers">
+                <div class="page-header">
+                    <h1>پاپ آور <small>popover.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>در مورد پاپ آور</h3>
+                        <p>برای نمایش قسمت کوچکی از اطلاعات, شبیه آی پد, برای اطلاعات بیشتر دادن به کاربر.</p>
+                        <p class="muted"><strong>*</strong> به پلاگین <a href="#tooltips">تولتیپ</a> احتیاج دارد</p>
+                        <a href="../js/uikit/popover.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>بروی دکمه ها بروید تا مشاهده نمایید.</p>
+                        <div class="well">
+                            <a href="#" class="btn btn-danger" rel="popover" title="عنوان شما" data-content="محل قرارگیری متن دلخواه شما که دوست دارید به نمایش درآورید!">موس را اینجا نگه دارید</a>
+                        </div>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>نحوه کار با جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('#example').popover(options)</pre>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 100px;">نوع</th>
+                                    <th style="width: 50px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>animation</td>
+                                    <td>boolean</td>
+                                    <td>true</td>
+                                    <td>افزودن انیمیشن سی اس اسی</td>
+                                </tr>
+                                <tr>
+                                    <td>placement</td>
+                                    <td>string|function</td>
+                                    <td>'right'</td>
+                                    <td>محل قرار گیری پنجره - top | bottom | left | right</td>
+                                </tr>
+                                <tr>
+                                    <td>selector</td>
+                                    <td>string</td>
+                                    <td>false</td>
+                                    <td>در صورت فعال بودن، به المان انتخابی متصل می شود</td>
+                                </tr>
+                                <tr>
+                                    <td>trigger</td>
+                                    <td>string</td>
+                                    <td>'hover'</td>
+                                    <td>حالت فعال شدن - hover | focus | manual</td>
+                                </tr>
+                                <tr>
+                                    <td>title</td>
+                                    <td>string | function</td>
+                                    <td>''</td>
+                                    <td>عنوان پیش فرض در صورت نداشتن خصوصیت عنوان</td>
+                                </tr>
+                                <tr>
+                                    <td>content</td>
+                                    <td>string | function</td>
+                                    <td>''</td>
+                                    <td>متن پیش فرض در صورت موجود نبودن خصوصیت متن</td>
+                                </tr>
+                                <tr>
+                                    <td>delay</td>
+                                    <td>number | object</td>
+                                    <td>0</td>
+                                    <td>
+                                        <p>زمان نمایش و پنهان شدن به میلی ثانیه</p>
+                                        <p>در صورت وجود عدد هم به ظاهر شدن هم به پنهان شدن اعمال می گردد</p>
+                                        <p>ساختار شی ای: <code>delay: { show: 500, hide: 100 }</code></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong>
+                            دلخواه ها می تواند به کمک خصوصیت های هر تگ به صورت اختصاصی نیز تعریف شود.
+                        </div>
+                        <h3>نشانگان</h3>
+                        <p>
+                            به دلیل سرعت و قابلیت خصوصیت نشانگانی خالی در تولتیپ و پاپ آور به صورت دلخواه است، به هر حال شما می توانید مانن د نمونه عمل کنید.
+                        </p>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">$().popover(options)</h4>
+                        <p>فعال سازی موارد لازم برای پاپ آور.</p>
+                        <h4 style="direction: ltr; text-align: right">.popover('show')</h4>
+                        <p>نمایش پاپ آور.</p>
+                        <pre class="prettyprint linenums">$('#element').popover('show')</pre>
+                        <h4 style="direction: ltr; text-align: right">.popover('hide')</h4>
+                        <p>پنهان کردن یک پاپ آور.</p>
+                        <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+                        <h4 style="direction: ltr; text-align: right">.popover('toggle')</h4>
+                        <p>نمایش/پنهان کردن پاپ آور.</p>
+                        <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Alert
+            ================================================== -->
+            <section id="alerts">
+                <div class="page-header">
+                    <h1>پیغام هشدار <small>alert.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>در مورد پیغام هشدار</h3>
+                        <p>کلاس کوچکی برای افزودن قابلیت بسته شدن به پیغام ها</p>
+                        <a href="../js/uikit/alert.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>نمونه های زیر نحوه نمایش پیغام های هشدار را نشان می دهد.</p>
+                        <div class="alert fade in">
+                            <a class="close" data-dismiss="alert" href="#">&times;</a>
+                            <strong>هی  دوست من!</strong> یه بار دیگه بررسی کن خودتو، یه جای کار می لنگه.
+                        </div>
+                        <div class="alert alert-block alert-error fade in">
+                            <a class="close" data-dismiss="alert" href="#">&times;</a>
+                            <h4 class="alert-heading">اوه اوه! یک خطا جدی رخ داده! </h4>
+                            <p>متن خطایی که رخ داده به همراه توضیحات اضافه، آدرس دقیق رخ دادف خط و .... اطلاعات ضروری برای رفع اشکال را هم می توانید اینجا به نمایش در آورید.</p>
+                            <p>
+                                <a class="btn btn-danger" href="#">فلان کار رو بکن</a> <a class="btn" href="#">یا این کار رو بکن</a>
+                            </p>
+                        </div>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>نحوه فعال سازی با جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$(".alert").alert()</pre>
+                        <h3>نشانگان</h3>
+                        <p>فقط کافیست  <code>data-dismiss="alert"</code> را به دکمه بستن خودتان اضافه کنید.</p>
+                        <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">$().alert()</h4>
+                        <p>برای کنترل تمامی هشدارهاست. برای پنهان شدن با افکت <code>.fade</code> و <code>.in</code> را حتما در کلاس آن قرار دهید.</p>
+                        <h4 style="direction: ltr; text-align: right">.alert('close')</h4>
+                        <p>بستن پیغام هشدار.</p>
+                        <pre class="prettyprint linenums">$(".alert").alert('close')</pre>
+                        <h3>رویدادها</h3>
+                        <p>چند رویداد موجود در این پلاگین عبارت است از:</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">رویداد</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>close</td>
+                                    <td>زمانی که <code>close</code> متد صدا زده شود این رویداد صدا زده می شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>closed</td>
+                                    <td>زمانی که هشدار بسته شد و انیمیشن آن هم نیز به پایان رسید صدا زده می شود.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <pre class="prettyprint linenums">
+$('#my-alert').bind('closed', function () {
+  // یه کاری بکن ...
+})</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Buttons
+            ================================================== -->
+            <section id="buttons">
+                <div class="page-header">
+                    <h1>دکمه ها <small>button.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>درباره</h3>
+                        <p>کاری بیشتر از یک دکمه، مثل گروه کردن، رادیو گروه و ...</p>
+                        <a href="../js/uikit/button.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال ها</h2>
+                        <p>چند نوع استفاده از دکمه ها.</p>
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>وضعیت فهم</td>
+                                    <td>
+                                        <button id="fat-btn" data-loading-text="در حال بارگزاری ..." class="btn btn-primary">
+                                            بارگزاری کامل
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>سوئیچی</td>
+                                    <td>
+                                        <button class="btn btn-primary" data-toggle="button">کلیک کن</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>چک باکسی</td>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons-checkbox">
+                                            <button class="btn btn-primary">راست</button>
+                                            <button class="btn btn-primary">وسط</button>
+                                            <button class="btn btn-primary">چپ</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>رادیویی</td>
+                                    <td>
+                                        <div class="btn-group" data-toggle="buttons-radio">
+                                            <button class="btn btn-primary">راست</button>
+                                            <button class="btn btn-primary">وسط</button>
+                                            <button class="btn btn-primary">چپ</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>نحوه کار با جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('.tabs').button()</pre>
+                        <h3>نشانگان</h3>
+                        <p>به دقت به خصوصیات هر یک از تگ ها دقت نمایید.</p>
+                        <pre class="prettyprint linenums">
+&lt;!-- Add data-toggle="button" to activate toggling on a single button --&gt;
+&lt;button class="btn" data-toggle="button"&gt;Single Toggle&lt;/button&gt;
+
+&lt;!-- Add data-toggle="buttons-checkbox" for checkbox style toggling on btn-group --&gt;
+&lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
+  &lt;button class="btn"&gt;Left&lt;/button&gt;
+  &lt;button class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Add data-toggle="buttons-radio" for radio style toggling on btn-group --&gt;
+&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
+  &lt;button class="btn"&gt;Left&lt;/button&gt;
+  &lt;button class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+                        </pre>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">$().button('toggle')</h4>
+                        <p>نمایش دکمه به صورت فعال.</p>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong>
+                            شما می توانید به کمک  <code>data-toggle</code> وضعیت خودکار سوئیچی ایجاد نمایید.
+                        </div>
+                        <pre class="prettyprint linenums">&lt;button class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre>
+                        <h4 style="direction: ltr; text-align: right">$().button('loading')</h4>
+                        <p>نحوه فعال سازی وضعیت مناسب به  صورتی که دکمه در آن حالت غیر فعال شده و متن موجود در<code>data-loading-text</code> را بنمایش می گذارد.
+                        </p>
+                        <pre class="prettyprint linenums">&lt;button class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+
+                        <h4 style="direction: ltr; text-align: right">$().button('reset')</h4>
+                        <p>بازگزداندن به حالت اولیه و متن اولیه موجود.</p>
+                        <h4 style="direction: ltr; text-align: right">$().button(string)</h4>
+                        <p>بازگرداندن به وضعیت مشخص با متن ارسال شده در پرانتز.</p>
+                        <pre class="prettyprint linenums">&lt;button class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
+&lt;script&gt;
+  $('.btn').button('complete')
+&lt;/script&gt;</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Collapse
+            ================================================== -->
+            <section id="collapse">
+                <div class="page-header">
+                    <h1>بسته شونده <small>collapse.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>درباره</h3>
+                        <p>بستر مناسب برای ایجاد اکاردئون و یا منوهای بسته شونده.</p>
+                        <a href="../js/uikit/collapse.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>با چند کد خط ساده ما یک اکاردئون می سازیم:</p>
+
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        گروه شماره #1
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="accordion-body collapse in">
+
+                                    <div class="accordion-inner">
+                                        متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                        گروه شماره #2
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="accordion-body collapse">
+
+                                    <div class="accordion-inner">
+                                        متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                        گروه شماره #3
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="accordion-body collapse">
+
+                                    <div class="accordion-inner">
+                                        متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.متن مورد نظر خود را در اینجا قرار دهید و همچنین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. همچنین شما لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$(".collapse").collapse()</pre>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 50px;">عنوان</th>
+                                    <th style="width: 50px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>parent</td>
+                                    <td>selector</td>
+                                    <td>false</td>
+                                    <td>اگر تمامی قسمت ها زیر مجموعه یک والد باشند زمان نمایش یکی سایرین بسته می شوند. (شبیه اکاردئون های قدیمی)</td>
+                                </tr>
+                                <tr>
+                                    <td>toggle</td>
+                                    <td>boolean</td>
+                                    <td>true</td>
+                                    <td>قابلیت باز یا بسته شدن آن قسمت بر روی یک دکمه</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>نشانگان</h3>
+                        <p>به مثال زیر با دقت نگاه کنید و به خصوصیات هر تگ توجه خاص نمایید.</p>
+                        <pre class="prettyprint linenums">
+&lt;button class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+  یک بسته شونده ساده
+&lt;/button&gt;
+
+&lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;</pre>
+                        <div class="alert alert-info">
+                            <strong>توجه نمایید!</strong>
+                            برای داشتن مجموعه از باز شونده ها کافی است <code>data-parent="#selector"</code>.را به المان اصلی ارجاع دهید.
+                        </div>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">.collapse(options)</h4>
+                        <p>برای فعال سازی بسته شونده است و می توانید دلخواه ها را به صورت  <code>object</code> در آن مشخص نمایید.
+                        <pre class="prettyprint linenums">
+$('#myCollapsible').collapse({
+  toggle: false
+})</pre>
+                        <h4 style="direction: ltr; text-align: right">.collapse('toggle')</h4>
+                        <p>برای باز/بسته کردن آن قسمت.</p>
+                        <h4 style="direction: ltr; text-align: right">.collapse('show')</h4>
+                        <p>برای باز کردن آن قسمت.</p>
+                        <h4 style="direction: ltr; text-align: right">.collapse('hide')</h4>
+                        <p>برای بستن آن قسمت.</p>
+                        <h3>رویدادها</h3>
+                        <p>
+                            رویدادهای موجود عبارتند از:.
+                        </p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">رویداد</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>show</td>
+                                    <td>زمان صدا زدن  <code>show</code> بلافاصله صدا زده می شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>shown</td>
+                                    <td>زمانی صدا زده می شود که آن قسمت به صورت کامل به نمایش در آید.</td>
+                                </tr>
+                                <tr>
+                                    <td>hide</td>
+                                    <td>
+                                        <td>زمان صدا زدن  <code>hide</code> بلافاصله صدا زده می شود.</td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hidden</td>
+                                    <td>زمانی صدا زده می شود که آن قسمت به صورت کامل پنهان شود.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <pre class="prettyprint linenums">
+$('#myCollapsible').on('hidden', function () {
+  // کاری بکن ...
+})</pre>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Carousel
+           ================================================== -->
+            <section id="carousel">
+                <div class="page-header">
+                    <h1>اسلایدشو <small>carousel.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>درباره</h3>
+                        <p>پلاگینی برای نمایش مطالب به سبک اسلایدی.</p>
+                        <a href="../js/uikit/carousel.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>در زیر شما یک اسلاید شو را می بینید.</p>
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="img/mdo-sfmoma-01.jpg" alt="">
+                                    <div class="carousel-caption">
+                                        <h4>عنوان مد نظر شما</h4>
+                                        <p>متن توضیح مرتبط در مورد این تصویر در این قسمت قرار می گیرد .</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/mdo-sfmoma-02.jpg" alt="">
+                                    <div class="carousel-caption">
+                                        <h4>عنوان مد نظر شما</h4>
+                                        <p>متن توضیح مرتبط در موردمتن توضیح مرتبط در موردمتن توضیح مرتبط در موردمتن توضیح مرتبط در مورد این تصویر در این قسمت قرار می گیرد .</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="img/mdo-sfmoma-03.jpg" alt="">
+                                    <div class="carousel-caption">
+                                        <h4>عنوان مد نظر شما</h4>
+                                        <p>متن توضیح مرتبط در موردمتن توضیح مرتبط در موردمتن توضیح مرتبط در موردمتن توضیح مرتبط در مورد این تصویر ر موردمتن توضیح مرتبط در مورد این تصویر ر موردمتن توضیح مرتبط در مورد این تصویر در این قسمت قرار می گیرد .</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                        </div>
+                        
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>توسط جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 50px;">نوع</th>
+                                    <th style="width: 50px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>interval</td>
+                                    <td>number</td>
+                                    <td>5000</td>
+                                    <td>زمان انتظار در هر حرکت.</td>
+                                </tr>
+                                <tr>
+                                    <td>pause</td>
+                                    <td>string</td>
+                                    <td>"hover"</td>
+                                    <td>نحوه متوقف شدن حرکت زمان ورود موس و فعال شدن آن پس از خروج.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>نشانگان</h3>
+                        <pمانند همیشه به خصوصیات هر تگ بدقت نگاه کنید.</p>
+                        <pre class="prettyprint linenums">
+&lt;div id="myCarousel" class="carousel"&gt;
+  &lt;!-- Carousel items --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Carousel nav --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+                        </pre>
+                        <h3>روش ها</h3>
+                        <h4 style="direction: ltr; text-align: right">.carousel(options)</h4>
+                        <p>آماده سازی برای یک اسلاید شو به همراه دریافت دلخواه ها به صورت <code>object</code> و آغاز حرکت تصاویر و قسمت ها.</p>
+                        <pre class="prettyprint linenums">
+$('.carousel').carousel({
+  interval: 2000
+})
+                        </pre>
+                        <h4 style="direction: ltr; text-align: right">.carousel('cycle')</h4>
+                        <p>آغاز حرکت چپ به راست حرکات.</p>
+                        <h4 style="direction: ltr; text-align: right">.carousel('pause')</h4>
+                        <p>توقف حرکت اسلایدر.</p>
+                        <h4 style="direction: ltr; text-align: right">.carousel(number)</h4>
+                        <p>آغاز حرکت از مکان خاص (مانند آرایه ها شماره گذاری می شود).</p>
+                        <h4 style="direction: ltr; text-align: right">.carousel('prev')</h4>
+                        <p>رفتن به اسلاید قبلی.</p>
+                        <h4 style="direction: ltr; text-align: right">.carousel('next')</h4>
+                        <p>رفتن به اسلاید بعدی.</p>
+                        <h3>رویدادها</h3>
+                        <p>ما در این پلاگین دو رویداد داریم.</p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px;">رویداد</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>slide</td>
+                                    <td>بلافاصله بعد از صدا زدن متد آن رویداد <code>slide</code>صدا زده می شود.</td>
+                                </tr>
+                                <tr>
+                                    <td>slid</td>
+                                    <td>پس از پایان حرکت اسلاید این رویداد صدا زده می شود.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Typeahead
+            ================================================== -->
+            <section id="typeahead">
+                <div class="page-header">
+                    <h1>پیشنهاد دهنده <small>typeahead.js</small></h1>
+                </div>
+                <div class="row">
+                    <div class="span3 columns">
+                        <h3>در مورد پیشنهاد دهنده</h3>
+                        <p>برای پیشنهاد دادن هوشمند ورودی های متنی در فرم ها استفاده می شود.</p>
+                        <a href="../js/uikit/typeahead.js" target="_blank" class="btn">دانلود فایل</a>
+                    </div>
+                    <div class="span9 columns">
+                        <h2>مثال</h2>
+                        <p>متن مثالی را وارد نمایید تا با نحوه کار آن آشنا شوید.</p>
+                        <div class="well">
+                            <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["تهران","مشهد","قم","تبریز","سمنان","کردستان","لرستان","زنجان","ارومیه","ساری","مازندران","شهر شهید پرور رودهن","بندر عباس","هرمزگان","بوشهر","شیراز","سیستان","ایلام","اردبیل","بجنرد","تترا","سمنگان","رسالت","توکیو","مسکو","پاریش","کوالالامپور","نوادا","بمبی","مکزیک","آلاسکا","بستنی","الوده"]'>
+                        </div>
+                        <hr>
+                        <h2>نحوه استفاده</h2>
+                        <p>به کمک جاوا اسکریپت:</p>
+                        <pre class="prettyprint linenums">$('.typeahead').typeahead()</pre>
+                        <h3>دلخواه ها</h3>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px;">نام</th>
+                                    <th style="width: 50px;">نوع</th>
+                                    <th style="width: 100px;">پیش فرض</th>
+                                    <th>توضیح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>source</td>
+                                    <td>array</td>
+                                    <td>[ ]</td>
+                                    <td>اطلاعات اولیه برای نمایش.</td>
+                                </tr>
+                                <tr>
+                                    <td>items</td>
+                                    <td>number</td>
+                                    <td>8</td>
+                                    <td>حداکثر تعداد نمایش پیشنهاد.</td>
+                                </tr>
+                                <tr>
+                                    <td>matcher</td>
+                                    <td>function</td>
+                                    <td>case insensitive</td>
+                                    <td>متدی برای تعریف نحوه پیدا کردن. که یک ورودی  <code>item</code> می گیرد. و در صورت پیدا شدن <code>true</code> بر می گرداند.</td>
+                                </tr>
+                                <tr>
+                                    <td>sorter</td>
+                                    <td>function</td>
+                                    <td>exact match,<br> case sensitive,<br> case insensitive</td>
+                                    <td>برای چینش نتایج پیدا شده.که یک ورودی می گیرد به نام  <code>items</code> .</td>
+                                </tr>
+                                <tr>
+                                    <td>highlighter</td>
+                                    <td>function</td>
+                                    <td>highlights all default matches</td>
+                                    <td>برای هایلایت کردن موارد پیدا شده است. که یک ورودی به نام  <code>item</code> می گیرد. و حتما باید html برگرداند.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>نشانگان</h3>
+                        <p>برای این کار مانند نمونه چند خصوصیت اضافه می کنیم.</p>
+                        <pre class="prettyprint linenums">
+&lt;input type="text" data-provide="typeahead"&gt;
+                        </pre>
+                        <h3>Methods</h3>
+                        <h4 style="direction: ltr; text-align: right">.typeahead(options)</h4>
+                        <p>آماده سازی ورودی نوشته برای پیشنهاد دهنده.</p>
+                    </div>
+                </div>
+            </section>
+
+           <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">بالا</a></p><br/>
+        <p>توسعه داده شده توسط تیم نرم افزاری تترا</p>
+        <p>پیشنهاد و نظرتان را با<a href="mailto:r.afzali@yahoo.com"> ما</a> در میان بگذرید</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+        <!-- the javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/prettify.js"></script>
+        <script src="../js/uikit/transition.js"></script>
+        <script src="../js/uikit/alert.js"></script>
+        <script src="../js/uikit/modal.js"></script>
+        <script src="../js/uikit/dropdown.js"></script>
+        <script src="../js/uikit/scrollspy.js"></script>
+        <script src="../js/uikit/tab.js"></script>
+        <script src="../js/uikit/tooltip.js"></script>
+        <script src="../js/uikit/popover.js"></script>
+        <script src="../js/uikit/button.js"></script>
+        <script src="../js/uikit/collapse.js"></script>
+        <script src="../js/uikit/carousel.js"></script>
+        <script src="../js/uikit/typeahead.js"></script>
+        <script src="js/application.js"></script>
+
+
+    </body>
+</html>
